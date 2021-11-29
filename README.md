@@ -1,108 +1,153 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Mai's Crafty Shop
 
-Welcome maialenz,
+## Introduction
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+The Crafty Shop is an e-commerce website offering personalized and handmade products. 
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+-   [View the Crafty Shop Heroku App](https://[appname].herokuapp.com/)
+-   [View the repository on GitHub](https://github.com/maialenz/crafty_shop/)
 
-## Gitpod Reminders
+![](MOCKUP IMAGE)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+This is Milestone N.4 of teh Full-Stack Web Development Diploma Course by UCD and Code Institute. 
 
-`python3 -m http.server`
+The Crafty Shop is a fully functionioning e-commerce Django web application, built in using Python and backed by PostgreSQL (and SQLite3 for development mode) database, and Deployed using Heroku. It allows users to purchase products and register an account with full CRUD functionality. For styling Bootstrap was used and the shop has the posibility to take real payments on a future. 
 
-A blue button should appear to click: _Make Public_,
+**ATTENTION!** At this moment the website is set up for educational purposes, and the Stripe Payments is not taking real cards. To test the card payments, first create an account and use the following card number: 4242 4242 4242 4242 ; expiry date: 42 42 and CVC: 424.
 
-Another blue button should appear to click: _Open Browser_.
+[Click here to view the project live.](https://.herokuapp.com/)
+  
+---
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+## Table of Contents
 
-A blue button should appear to click: _Make Public_,
+### 1. [UX](#ux) 
 
-Another blue button should appear to click: _Open Browser_.
+#### 1.1. [Goals](#goals)
+##### 1.2.1. [Visitor Goals](#visitor-goals)   
+##### 1.2.2. [Business goals](#business-goals)
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+#### 1.2. [User Stories](#user-stories)
 
-To log into the Heroku toolbelt CLI:
+#### 1.3. [User Centered Design](#user-centered-design)
+- Strategy 
+- Scope 
+- Structure 
+- Wireframes
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+### 2. [Design](#design)
+- Colour Scheme
+- Typography
+- Imagery
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+### 3. [Database Model](#database-model)
 
-------
+### 4. [Features](#features)
 
-## Release History
+### 5. [Technologies Used](#technologies-used)
+- Syntax
+- Frameworks, Libraries & Programs
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+### 6. [Testing](#testing)
+- [Testing Document](TESTING.md)
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+### 7. [Deployment](#deployment)
+- [Deployment Document](DEPLOYMENT.md)
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+### 8. [Credits](#credits)
+- Resources
+- Code 
+- Media
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+----
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+# UX
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+## Goals
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+As the Covid-19 pandemic has forced businesses around the world to have to close their doors for months and mothns, many have been left with no choice but to adapt quickly and take the goods and services online.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+As most of us found ourselves in this position and were forced to work/study from home, we started finding other ways to entretain and keep busy in our homes. We started crafting, baking, cooking, and now they are a large part of our daily rutines. We have also started appreciating hand made things and supporting small and community businesses that received a big push back due to the situtation.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+So it's understandable when many have decided to move from traditional retail to e-commerce. 
+This website wants to offer those who appreciate the handmade crafts and the quality that comes with it.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+### Visitor Goals
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+The target audience for The Crafty Shop are:
+- People who value handmade items
+- People searching for unique gifts
+- People that enjoy art
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+User Goals:
+- Get inspiration
+- Find a gift
+- Be able to navigate the shop easily, find what they need and make a secure purchase
+- Buy from a small shop
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+### Business Goals
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+The goals of The Crafty Shop business are;
+- To provide a professional online shop.
+- To sell homemade and handmade crafts to its users
+- Build brand awareness.
+- Build an online pressence
 
 ---
 
-Happy coding!
+## User Stories
+
+![Image of User Stories table](docs/Readme/user-stories.png)
+
+---
+
+## User Centered Design
+
+### Strategy
+
+- The main goal of this website is to convert visitors into frequent customers. As the items shown in this website are handcrafted items, the products will be shown in a very minimalistic way, with minimum imagery and clutter to show that the products are made in the most professional manner, clean and tidy. To show the customers the type of crafts that are offered on the website, all products will be displayed together, with the option to sort them by name, price, ... as well as having the option to go directly to the category they would like to search.
+
+- To achieve the goals pointed on the goals section, the information will be diplayed to the user inside each item, not to overwhelm the possible customer. The website will show a light but light-in-color palette to give the sense of delicacy and care by the creator.
+
+The steps a new user would idealy take when arriving into the website would be the following:
+- Expore the website's landing page, where the information will introduce the user to the products offered within the shop.
+- Follow the call to action buttons directing the user either to all the products or the selected category.
+- Select the product of their choice and choose the quantity needed
+- Following the secure checkout call to action button go to the checkout page and purchase the product/s selected following the instructions on the following pages (delivery information, card information)
+- On the delivery instruction page, choose to save the information and create an account 
+- Go to the personal account to see their delivery information where they can update personal details, see their latest order.
+- Remain a regular user to the shop due to an positive website experience and crafted items.
+
+This will all be achieved through creating a clear, tidy and strong UI focusing on well structured content. Having a creat hirearchy of information and well placed call to action buttons will allow the user to navigate and use the functionalities of the website without the need of instructions
+
+- Technical capabilities:
+    - To use this website the user needs to have acces to some internet connection within the chosen device.
+    - They also need to have basic understanding on how to select and navigate the page.
+    - This page will be done using the Bootstrap framework to create a responsive structure and implement sections that the user needs. The website will be separated in 8 (Landing, Products, Product information, Register, Login, Bag, checkout, Payments). Only registered users will be allowed to access the personal account to see their details. The admin/superuser will be allowed to edit/delete products (accessed under the product name) as well as adding new products.
+
+---
+
+### Scope | Trade Off
+
+- Features within the desing plan with highest priority:
+    - Minimal but appealing homepage
+    - Navigation links clearly visible on the top of the website
+    - Responsive navigation bar
+    - Only allow registered users to access and manage their personal accounts
+    - Only allow superusers to add/edit/delete new products
+    - Detailed information under each product
+    - A secured payment system
+    - Validated and error free forms
+    - Search and sorting functionalities
+    - The posibility for the user to check the selected products and to have CRUD functionalities to control their bags.
+
+- Lower priority features that may not be included in the initial release of the website:
+    - Contact section to send messages to the Creator
+    - A comment section that allows all users to write their own feedback
+    - A rating option for products
+    - A gallery section connected to customers instagram accounts
+    - The functionality to add personalized options for some products
+    - Related/recommended products to be displayed under the product choice
+
+---
+
