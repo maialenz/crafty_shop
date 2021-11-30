@@ -310,3 +310,72 @@ Lineitem Total | lineitem_total | max_digits=6, decimal_places=2, null=False, bl
 
 ---
 
+# Features
+
+## Existing Features
+
+### Elements on every page
+
+**Navbar:**
+- The navbar features on every page except on the checkout/payment pages. This is standard for webshops, as it avoids accidental clicks or distractions and makes the customer focus on the payment.
+- The navbar has a logo on the left, linking the homepage. This will remain the same in tablet and mobile view as it is expected to be. 
+- In mobile view, the navigation will collapse into a burger icon situated on the right hand side, as most users will be right handed and it is easier to access it with a single hand.
+- It will be responsive on most devices.
+- The shopping bag will be placed on the right hand side making sure is easy to spot.
+- The shopping cart works even for users not registered or logged in.
+- Logged out users will be able to see the options to log in, register and product pages.
+- Logged in users will be able to see their account page and the possibility to loggout and end their session.
+- Search bar will be located in the navbar
+
+**Footer:**
+- Will not appear on the checkout page for the same reasons as the navbar
+- The footer will contain the copyright information as well as the contact details and the posibility to include some of the future release features if there is enough time to incorporate them. 
+- The social media links will be placed in the right side as it will be easier to access them with a single hand
+
+**Back to Top Button:**
+- All long pages will be provided with an arrow to scroll to the top to automatically bring the user to the top of the page. This avoids the need for the user to manually have to scroll all the way up.
+
+**Home/Landing Page:**
+- The home page will feature a hero image taking most of the page as a welcome page. Inside it will have the name of the shop and a brief description with a CTA button that will redirect the user to the main product page where they'll be able to start their shopping journey.
+
+**Products/Shop Page:**
+- *Categories* button under the navbar for easy access to different categories of products/items
+- *Sort* option will allow to sort the products on the page by price (high to low and low to high), name (a-z or z-a)
+- *Products* list
+    - The products in the shop they'll be represented by an image. The name, category and price will be placed under the image
+    - The products will be placed using card class from bootstrap
+    - Each product will have a button under at the bottom, which opens the product individually, showing the description and the options to increase the quantities to be added to the cart
+
+**Product Detail Page:**
+- This page can be accessed from the CTA button under each product card on the Shop page.
+- In this page the users can find the Image, Title or name of the product, description of the item, the category it belongs to and the price of the item.
+- The users will have the option to select the amount of items they would like to add to the cart.
+
+**Profile Page:**
+- Non-Logged or non-registered users will have the options to LogIn or Register for an account.
+- *My Account*: This page will be accessible to *Registered* users **only**
+    - Users that have registered and logged in will be able to access their individual page where they can see and edit their delivery/billing information
+    - Here logged users can see their past orders, if there were any.
+
+**Bag Page:** 
+- This follows already well know e-commerce style for shopping carts. 
+- The users will be able to see the items they have added to the shopping basket
+- The information for each items will be displayed for the users review. They will have the option to remove an item from the cart or update it (qty, adding more items by going to the main product page again)
+- A checkout button will invite the users to confirm the order by finishing the payment.
+- The shipping price will be updated depending if the user has met the necessary requirements for a free delivery or not. This will be added to the card automatically.
+
+**Checkout Page:**
+- This can be accessed from the bag page.
+- Users will be asked to introduce their delivery/billing information.
+    - Registered and Logged in Users will find this information prefiled for them. They can change any fields here.
+- Users will have the option to save the details introduced on the form on their profile for future purchases. This makes the shopping experience nicer as the customer doesn't have to constantly introduce personal detail.
+- Card details are not saved.
+- A Secure Checkout button will allow the user to end the payment, confirming the order.
+- The payment will be created using Stripe's payment method. This avoids the need to write all the code manually and instead reuse the already available code.
+- The user will be prompted with validation messages handled by Stripe.
+
+**Order Confirmation/Success Page:**
+- This page is only accessible when the payment has been completed. It can also be accessed from the profile page by clicking on top of the Past order numbers. 
+- The user is able to see their details as well as the order number for their reference.
+- A confirmation email is sent to the user when the payment is successfull.
+
