@@ -227,3 +227,86 @@ The Crafty Shop website will have an overall simplistic and minimalist feeling, 
 - Imagery will be used but will be used only when necessary, like to show product images to users. There might be used as a landing page image as an introduction to the shop to welcome the user to the store and increase expectation of what they will find along the website. 
 - The images representing the products, will be as simple as possible, just representing the product on a single images. 
 
+---
+
+# Database Structure
+
+## Database Choice
+- This project uses two different types of databases, one for local development and one for the production version. As the Crafty Shop was built on Djnago, during the local development the standard Django's built in **MySQL** (sqlite3) database was used. On deployment on Heroku, the database was changed to **PostgreSQL** database, which is provided by Heroku as an add-on for production.
+
+## Data Models
+
+### User
+
+The Django’s default user model for authorization is has been used, which allows the project to meet one of the main requirements of separating features by anonymous users, users in session and superusers. This User model is the standard `django.contrib.auth.models`.
+
+**NOTE**: The structure of the Checkout and Products apps have been inspired by *Boutique Ado*, which was previously creaded following videos created by Code Institute.
+
+### Profiles App
+
+**UserProfile Model**
+
+| **Name** | **Database Key** | **Validation** | **Field Type** |
+--- | --- | --- | --- 
+User | user | on_delete=models.CASCADE | OneToOneField 'User'
+Phone number | default_phone_number | max_length=20, null=True, blank=True | CharField
+Address Line1 | default_street_address1 | max_length=80, null=True, blank=True | CharField
+Address Line2 | default_street_address2 | max_length=80, null=True, blank=True | CharField
+Postcode | default_postcode | max_length=20, null=True, blank=True | CharField
+Town/City | default_town_or_city | max_length=40, null=True, blank=True | CharField
+County | default_county | max_length=80, null=True, blank=True | CharField
+Country | default_country | blank_label='Country', null=True, blank=True | CountryField
+
+### Products App
+
+**Product Model**
+
+| **Name** | **Database Key** | **Validation** | **Field Type**|
+--- | --- | --- | --- 
+Category | category | null=True, blank=True, on_delete=models.SET_NULL | ForeignKey 'Category'
+Sku | sku | max_length=254, null=True, blank=True | CharField 
+Name | name | max_length=254 | CharField 
+Description | description | max_length=700 | TextField
+Image URL | image_url | max_length=300, null=True, blank=True | URLField
+Image | image | null=True, blank=True | ImageField
+Price | price | max_digits=6, decimal_places=2 | DecimalField 
+
+**Category Model**
+
+| **Name** | **Database Key** | **Validation** | **Field Type** |
+--- | --- | --- | ---
+Name | name | max_length=254 | CharField 
+Friendly Name | friendly_name | max_length=254, null=True, blank=True | Charfield 
+
+### Checkout App
+
+**Order Model**
+
+| **Name** | **Database Key** | **Validation** | **Field Type** |
+--- | --- | --- | --- 
+Order Number | order_number | max_length=32, null=False, editable=False | CharField
+User Profile | user_profile | on_delete=models.SET_NULL, null=True, blank=True, related_name='orders'| ForeignKey 'UserProfile' 
+Full Name | full_name | max_length=50, null=False, blank=False | CharField 
+Email | email | max_length=254, null=False, blank=False | EmailField 
+Country | country | blank_label='Country*', null=False, blank=False | CountryField
+Postcode | postcode | max_length=20, null=True, blank=True | CharField 
+Town/City | town_or_city | max_length=40, null=False, blank=False | CharField
+Phone number | phone_number | max_length=20, null=False, blank=False | CharField 
+Street Address 1 | street_address1 | max_length=80, null=False, blank=False | CharField
+Street Address 2 | street_address2 | max_length=80, null=False, blank=True | CharField 
+County | county | max_length=80, null=True, blank=True | CharField
+Date | date | auto_now_add=True | DateTimeField
+Total Price | total_price | max_digits=10, decimal_places=2, null=False, default=0 | DecimalField
+Stripe Pid | stripe_pid | max_length=254, null=False, blank=False, default='' | CharField 
+
+**OrderLineItem Model**
+
+| **Name** | **Database Key** | **Validation** | **Field Type** |
+--- | --- | --- | --- 
+Order | order | null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems' | ForeignKey 'Order'
+Product | product | null=False, blank=False, on_delete=models.CASCADE | ForeignKey 'Product' 
+Quantity | quantity | null=False, blank=False, default=0 | IntegerField
+Lineitem Total | lineitem_total | max_digits=6, decimal_places=2, null=False, blank=False, editable=False | DecimalField 
+
+---
+
