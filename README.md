@@ -148,6 +148,36 @@ This will all be achieved through creating a clear, tidy and strong UI focusing 
     - A gallery section connected to customers instagram accounts
     - The functionality to add personalized options for some products
     - Related/recommended products to be displayed under the product choice
+    - Footer with social media links, contact information and Links to different categories for easy access
+
+---
+
+### Structure
+
+- The structure of the site will be layed out in ----------- pages. The landing page(homepage) will welcome new and returning users to the page, where they'll see a call to action button that will direct them to the shop where they'll be able to select and purchase different items. Anonymous users wi8ll be allowed to make purchases and will be able to not to make an account, but these will not be able to access the personal accounts where they can see their latest purchases. Normal users are not able to access the full CRUD functionality of the database, being this only accessible for the Admin/Superusers. The latest, will have an extra page where they will be able to insert/edit/delete products. Logged in users will have the logout option to stop their session cookies. The basic structure of the website is:
+    - Header/Navigation - *Top Level*
+        - The navigation bar will be a hamburger/bars menu icon on smaller screen sized. It is not sticky as there will be a back to top icon throught the site for UX purposes.
+        - The navigation menu will feature a search bar allowing users fast and immediate search of the site to quickly find the products they are looking for. 
+        - Categories will be displayed in button/link form to access same category products in a faster way.
+    - Body - *Main Page Elements*
+        - The product page overview will show a typical webshop layout including cards with product images, product name, price and a button to direct the user to the detailed page of the selected product for further inspection.
+        - The individual product page will include the product's image, a description, price and add to bag button.
+        - The bag page will show the summary of the product selection with the extra prices added with the grand total showing at the bottom of all products added to the bag for the consideration of the customers before the purchase.
+        - The order confirmation page will display all the users details to confirm the order was successfully delivered.
+    - Footer - *Bottom level*
+        - A repeated navigation menu to help the users change categories if they are at the bottom of the page.
+        - Social media links so the users can follow and see the shops creations.
+        - Copyright information
+        - Contact information
+
+---
+
+### Wireframes
+
+The wireframes were created using [Balsamiq](https://balsamiq.com/) to design and plan the project
+- [Mobile Wireframes ](docs/Readme/wireframes/mobile-wireframes.png)
+- [Ipad Wireframes ](docs/Readme/wireframes/ipad-wireframes.png)
+- [Desktop Wireframes ](docs/Readme/wireframes/desktop-wireframes.png)
 
 ---
 
