@@ -36,11 +36,15 @@ The Crafty Shop is a fully functionioning e-commerce Django web application, bui
 - Wireframes
 
 ### 2. [Design](#design)
-- Colour Scheme
+- Colours
 - Typography
+- Icons
+- Logo
 - Imagery
 
-### 3. [Database Model](#database-model)
+### 3. [Database Structure](#database-structure)
+#### 3.1. [Database Choice](#database-choice)
+#### 3.2. [Data Models](#data-models)
 
 ### 4. [Features](#features)
 
@@ -180,4 +184,46 @@ The wireframes were created using [Balsamiq](https://balsamiq.com/) to design an
 - [Desktop Wireframes ](docs/Readme/wireframes/desktop-wireframes.png)
 
 ---
+
+# Design
+
+The Crafty Shop website will have an overall simplistic and minimalist feeling, to emphasis a clean and high quality crafts and items on sale. 
+
+### Colors
+
+- The color scheme for this webshop will contain three main colors: A primary color, secondary and accent colors. In the places where accessibility requires a darker tone, this will be achieved with darker tones of the same colors.
+- For the success and error colors red and green will be used, as these are obvious to everybody. 
+- The colors will be taken from the brand logo, to keep a professional and pull the site together.
+- Chosen colors:
+    - 
+    - 
+    - 
+
+### Typography
+
+- There will be four fonts used throughout the website. Fredericka the Great and Shadows Into Light will only be used for the logo and main header as they are fun and easy to see. They give a sense of handpainted/handmade sense to the user, which goes very well along the theme of the website. Quicksand will be used and the main font for the mayority of the website, using different weights and sizes to fit the circumstances of the use. Sans-serif will be used as a fallback alternative in case of unsuported font.
+    - Fredericka the Great: Main Header/Logo
+    - Shadows Into Light: Main Header/Logo
+    - Quicksand: Rounded but simple font. It has a informal but professional style, suited for a shop were users are spending their money but they may feel closer to the artist/creator
+    - Sans-Serif: used as a fallback font
+- All fonts were taken from [Google Fonts](https://fonts.google.com/) to avoid unsuported browser/systems. 
+
+### Icons
+
+- To keep a simplistic and minimalistic feeling only the most necessary icons were used. The icons were taken from [Fontawesome](https://fontawesome.com/v6.0)
+    - Search icon
+    - Shopping cart icon
+    - User icon
+    - Facebook, Instagram, and Social media icons
+    - 
+
+### Logo
+
+- The logo has been created using [Canva]() for a personalized and custom brand. It displays ... according to the products created and offered on this website
+******** MISING LOGO ***********
+
+### Imagery
+
+- Imagery will be used but will be used only when necessary, like to show product images to users. There might be used as a landing page image as an introduction to the shop to welcome the user to the store and increase expectation of what they will find along the website. 
+- The images representing the products, will be as simple as possible, just representing the product on a single images. 
 
