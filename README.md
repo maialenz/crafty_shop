@@ -379,3 +379,10 @@ Lineitem Total | lineitem_total | max_digits=6, decimal_places=2, null=False, bl
 - The user is able to see their details as well as the order number for their reference.
 - A confirmation email is sent to the user when the payment is successfull.
 
+# Features Left to Implement:
+- Featured products at the top showing the top products or seasonal items chosen by the admin/superuser or by popularity.
+- Categories at the footer for easier access
+- Pagination buttons to provided if there's an increase on product quantity on the website.
+- A gallery page showing all products made and pictures customers have send. 
+- A gallery showing images that customers have posted on their accounts by the use of tags/hashtags
+- Coupons and discount codes: The option to give customers temporary discount codes to use within x amount of time.
