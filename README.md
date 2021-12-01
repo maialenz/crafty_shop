@@ -9,11 +9,11 @@ The Crafty Shop is an e-commerce website offering personalized and handmade prod
 
 ![](MOCKUP IMAGE)
 
-This is Milestone N.4 of teh Full-Stack Web Development Diploma Course by UCD and Code Institute. 
+This is Milestone 4 of the Full-Stack Web Development Diploma Course by UCD and Code Institute. 
 
 The Crafty Shop is a fully functionioning e-commerce Django web application, built in using Python and backed by PostgreSQL (and SQLite3 for development mode) database, and Deployed using Heroku. It allows users to purchase products and register an account with full CRUD functionality. For styling Bootstrap was used and the shop has the posibility to take real payments on a future. 
 
-**ATTENTION!** At this moment the website is set up for educational purposes, and the Stripe Payments is not taking real cards. To test the card payments, first create an account and use the following card number: 4242 4242 4242 4242 ; expiry date: 42 42 and CVC: 424.
+**ATTENTION!** At this moment the website is set up for educational purposes only, and the Stripe Payments is not taking real cards. To test the card payments, first create an account and use the following card number: 4242 4242 4242 4242 ; expiry date: 42 42 and CVC: 424.
 
 [Click here to view the project live.](https://.herokuapp.com/)
   
@@ -392,6 +392,8 @@ Lineitem Total | lineitem_total | max_digits=6, decimal_places=2, null=False, bl
 # Technologies Used
 ## Syntax
 ## Frameworks, Libraries & Programs
+- [Canva](https://www.canva.com/): To create Logo/favicon
+- [Favicon generator](https://favicon.io/): To generate the favicon created with Canva
 
 # Testing
 - [Testing Document](TESTING.md)
