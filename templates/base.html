@@ -59,6 +59,7 @@
     <link rel="apple-touch-icon" type="image/png" href="{% static 'favicon/apple-touch-icon.png' %}" />
     <link rel="icon" type="image/png" href="{% static 'favicon/favicon-32x32.png' %}" />
     <link rel="icon" type="image/png" href="{% static 'favicon/favicon-16x16.png' %}" />
+    <link rel="icon" type="image/png" href="{% static 'favicon/favicon.ico' %}" />
     <link rel="manifest" href="{% static 'favicon/site.webmanifest' %}">
 
     <!--Title-->
@@ -71,7 +72,11 @@
     <header class="container-fluid fixed-top">
         <div id="topnavbar" class="row bg-white">
 
-            <!--Shop Logo-->
+            <!--Shop logo-->
+            <a class="navbar-brand px-1 mr-md-1" href="{% url 'home' %}">
+                <img id="logo" src="{% static 'images/Crafty-logo-circle.png' %}" alt="The Crafty Shop logo">
+            </a>
+            <!--Shop Name-->
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
                     <h2 class="logo-font text-black my-0">The <strong>Crafty</strong> Shop</h2>
