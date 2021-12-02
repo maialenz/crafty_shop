@@ -26,7 +26,7 @@
     {% block corecss %}
         <!--Bootstrap CSS-->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Shadows+Into+Light&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
 
@@ -63,7 +63,7 @@
 <body>
 
     <header class="container-fluid fixed-top">
-        <div id="topnavbar" class="row bg-white">
+        <div id="topnavbar" class="row bg-white pt-lg-1 d-lg-flex">
 
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
 
@@ -74,7 +74,7 @@
                 -->
                 <!--Shop Name-->
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h2 class="logo-font text-black my-0">The <strong>Crafty</strong> Shop</h2>
+                    <h2 class="logo-font text-blue my-0">The <strong>Crafty</strong> Shop</h2>
                 </a>
             </div>
 
@@ -100,7 +100,7 @@
 
 					<!-- User Account -->
 					<li class="list-inline-item dropdown">
-						<a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown"
+						<a class="text-blue nav-link" href="#" id="user-options" data-toggle="dropdown"
 							aria-haspopup="true" aria-expanded="false">
 							<div class="text-center">
 								<div><i class="fas fa-user fa-lg "></i></div>
@@ -128,7 +128,7 @@
 					<!-- Shopping Bag with Grand Total-->
 					<li class="list-inline-item">
 						<!-- If item is in the bag, display a list of items included -->
-						<a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
+						<a class="{% if grand_total %}text-info font-weight-bold{% else %}text-blue{% endif %} nav-link"
 							href="">
 							<div class="text-center">
 								<div><i class="fas fa-shopping-bag fa-lg"></i></div>
