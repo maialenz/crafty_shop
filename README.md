@@ -405,5 +405,7 @@ Lineitem Total | lineitem_total | max_digits=6, decimal_places=2, null=False, bl
 ## Resources
 ## Code
 ## Media
+- Thank you to all the image creators on Unsplash for allowing me use their images for free in this project:
+    - [Joanna Kosinska](https://unsplash.com/@joannakosinska)
 
 # Aknowledgements
