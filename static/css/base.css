@@ -29,10 +29,12 @@ body {
 }
 
 .to-shop-button {
-    background: #926b6d/*#42656a #3f3a4f #a58e96*/;
+    background: #3e6234 /* #c8d5ea #643e4d #42656a #3f3a4f #a58e96*/;
     color: white;
+    font-weight: 600;
     min-width: 260px;
 }
+
 
 .btn-black {
     background: black;
@@ -55,6 +57,15 @@ body {
 
 .border-gray {
     border: 1px solid gray !important;
+}
+
+#discount-banner-text {
+    font-size: 1rem;
+    color: #3f3a4f !important;
+    font-weight: 800;
+}
+.bg-purple {
+    background: #c8d5ea !important;
 }
 
 /* -------------------------------- Media Queries */

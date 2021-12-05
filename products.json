@@ -1,0 +1,548 @@
+[
+    {
+      "pk": 1,
+      "model": "products.product",
+      "fields": {
+        "sku": "ms4111111",
+        "name": "Fox Yoga Book Sleeve",
+        "description": "Padded sleeve will protect your book or gadget from damage if you often take them with you in a bag or backpack. Also It is a nice and useful gift for your family and friends. 🌸 Lining - blue-grey with white polka dot fabric. Padded with foam for durability and better protection. The fabric design may vary slightly from item to item as they are handmade. The colour of the lining, buttons, and elastic may vary depending on the supplier's availability.",
+        "price": 17.20,
+        "category": 16,
+        "image_url": "https://i.etsystatic.com/18703635/r/il/199d23/3429954950/il_794xN.3429954950_4dmz.jpg",
+        "image": "yoga-fox-book-cover.jpg"
+      }
+    },
+    {
+      "pk": 2,
+      "model": "products.product",
+      "fields": {
+        "sku": "ms4111112",
+        "name": "Otters in Love Book Sleeve",
+        "description": "Book / iPad / Kindle sleeve with cute Otters - with a Teal background. Padded sleeve will protect your book or gadget from damage if you often take them with you in a bag or backpack. Also It is a nice and useful gift for your family and friends. 🌸 Lined with light-blue fabric. Padded with foam for durability and better protection.",
+        "price": 17.20,
+        "category": 16,
+        "image_url": "https://i.etsystatic.com/18703635/r/il/5e706c/2937937611/il_794xN.2937937611_gp7a.jpg",
+        "image": "book-cover-otters.jpg"
+      }
+    },
+    {
+      "pk": 3,
+      "model": "products.product",
+      "fields": {
+        "sku": "ms4111113",
+        "name": "Christmas Book Sleeve",
+        "description": "Padded sleeve will protect your book or gadget from damage if you often take them with you in a bag or backpack. Also It is a nice and useful gift for your family and friends. Made of cotton fabric, lined with plain beige cotton fabric. Padded with foam for durability and better protection.",
+        "price": 17.20,
+        "category": 16,
+        "image_url": "https://i.etsystatic.com/18703635/r/il/6622dd/3485760507/il_794xN.3485760507_ht9k.jpg",
+        "image": "christmas-book-cover.jpg"
+      }
+    },
+    {
+      "pk": 4,
+      "model": "products.product",
+      "fields": {
+        "sku": "ms4111114",
+        "name": "Bells and Candles Book Sleeve",
+        "description": "Padded sleeve will protect your book or gadget from damage if you often take them with you in a bag or backpack. Also It is a nice and useful gift for your family and friends. Made of cotton fabric, lined with plain beige cotton fabric. Padded with foam for durability and better protection.",
+        "price": 17.20,
+        "category": 16,
+        "image_url": "https://i.etsystatic.com/18703635/r/il/bed4dc/3525732793/il_794xN.3525732793_mkbf.jpg",
+        "image": "christmas-bells-book-cover.jpg"
+      }
+    },
+    {
+      "pk": 5,
+      "model": "products.product",
+      "fields": {
+        "sku": "ms4111115",
+        "name": "Autumn Book Sleeve",
+        "description": "Padded sleeve will protect your book or gadget from damage if you often take them with you in a bag or backpack. Also It is a nice and useful gift for your family and friends. Made of cotton fabric, lined with plain beige cotton fabric. Padded with foam for durability and better protection.",
+        "price": 17.20,
+        "category": 16,
+        "image_url": "https://i.etsystatic.com/18703635/r/il/dc6b32/3490605517/il_794xN.3490605517_l9v5.jpg",
+        "image": "autumn-book-cover.jpg"
+      }
+    },
+    {
+      "pk": 6,
+      "model": "products.product",
+      "fields": {
+        "sku": "ms4111116",
+        "name": "Halloween Bookmark, Bats and Spiders",
+        "description": "Handmade fabric bookmark would make a perfect gift for any book lover . It can also be used as a filler for Christmas Stockings or Advent calendars. These bookmarks are digitally printed, and you will receive exactly the same design as at the listing photo. This bookmark has a cardboard base, which is hand covered with fabric, the back is made of kraft brown paper. 'Please do not bend'. Size - 5cm x 15cm.",
+        "price": 4.45,
+        "category": 17,
+        "image_url": "https://i.etsystatic.com/18703635/r/il/e8448b/3387582677/il_794xN.3387582677_hhto.jpg",
+        "image": "bat-spider-bookmark.jpg"
+      }
+    },
+    {
+      "pk": 7,
+      "model": "products.product",
+      "fields": {
+        "sku": "ms4111117",
+        "name": "Otter Bookmarks",
+        "description": "Handmade fabric bookmark would make a perfect gift for any book lover . It can also be used as a filler for Christmas Stockings or Advent calendars. The design of the bookmarks may vary slightly from item to item, depending on how the fabric is cut. This bookmark has a cardboard base, which is hand covered with fabric, the back is made of kraft brown paper. 'Please do not bend'. Size - 5cm x 15cm.",
+        "price": 4.45,
+        "category": 17,
+        "image_url": "https://i.etsystatic.com/18703635/r/il/fa0475/3352762598/il_794xN.3352762598_h29g.jpg",
+        "image": "otter-bookmark.jpg"
+      }
+    },
+    {
+      "pk": 8,
+      "model": "products.product",
+      "fields": {
+        "sku": "ms4111118",
+        "name": "Geo Forest Bookmark,",
+        "description": "Handmade fabric bookmark would make a perfect gift for any book lover . It can also be used as a filler for Christmas Stockings or Advent calendars. The design of the bookmarks may vary slightly from item to item, depending on how the fabric is cut. This bookmark has a cardboard base, which is hand covered with fabric, the back is made of kraft brown paper. 'Please do not bend'. Size - 5cm x 15cm.",
+        "price": 4.45,
+        "category": 17,
+        "image_url": "https://i.etsystatic.com/18703635/r/il/c8911c/3349454320/il_794xN.3349454320_rumn.jpg",
+        "image": "geo-forest-bookmark.jpg"
+      }
+    },
+    {
+      "pk": 9,
+      "model": "products.product",
+      "fields": {
+        "sku": "ms4111119",
+        "name": "Halloween Bookmark, Little Witches",
+        "description": "Handmade fabric bookmark would make a perfect gift for any book lover . It can also be used as a filler for Christmas Stockings or Advent calendars. The design of the bookmarks may vary slightly from item to item, depending on how the fabric is cut. This bookmark has a cardboard base, which is hand covered with fabric, the back is made of kraft brown paper. 'Please do not bend'. Size - 5cm x 15cm.",
+        "price": 4.45,
+        "category": 17,
+        "image_url": "https://i.etsystatic.com/18703635/r/il/bfe321/3322723938/il_794xN.3322723938_grbr.jpg",
+        "image": "halloween-bookmark.jpg"
+      }
+    },
+    {
+      "pk": 10,
+      "model": "products.product",
+      "fields": {
+        "sku": "ms4111120",
+        "name": "Kandinsky Art Book Sleeve",
+        "description": "Padded sleeve will protect your book or gadget from damage if you often take them with you in a bag or backpack. Also It is a nice and useful gift for your family and friends. 🌸 Lined with plain beige cotton fabric. Padded with foam for durability and better protection. This book sleeve is digitally printed, and you will receive exactly the same design as at the listing photo. The colour of the lining, buttons, and elastic may vary depending on the supplier's availability.",
+        "price": 17.20,
+        "category": 16,
+        "image_url": "https://i.etsystatic.com/18703635/r/il/ba5f28/3001949009/il_794xN.3001949009_k5ax.jpg",
+        "image": "kandinski-book-cover.jpg"
+      }
+    },
+    {
+      "pk": 11,
+      "model": "products.product",
+      "fields": {
+        "sku": "ms4111121",
+        "name": "Blind Date with a Book - Mystery Book",
+        "description": "Our Blind Date With a Book takes your sight out of the equation and challenges you to take a chance on a complete unknown instead. In addition to a book, you'll get a bookmark from our store, a bookish sticker, and a packet of organic tea. All of our books are gently used or better, chosen with care, and packaged beautifully, so whether you're buying one for yourself or a friend, you can be sure you've purchased a great gift.",
+        "price": 13.65,
+        "category": 19,
+        "image_url": "https://i.etsystatic.com/24906440/r/il/7c072e/2745706300/il_794xN.2745706300_b69y.jpg",
+        "image": "blind-date-msytery.jpg"
+      }
+    },
+    {
+      "pk": 12,
+      "model": "products.product",
+      "fields": {
+        "sku": "ms4111122",
+        "name": "Blind Date with a Book - Mystery, Thriller",
+        "description": "Our Blind Date With a Book takes your sight out of the equation and challenges you to take a chance on a complete unknown instead. In addition to a book, you'll get a bookmark from our store, a bookish sticker, and a packet of organic tea. All of our books are gently used or better, chosen with care, and packaged beautifully, so whether you're buying one for yourself or a friend, you can be sure you've purchased a great gift.",
+        "price": 17.50,
+        "category": 19,
+        "image_url": "https://i.etsystatic.com/24157508/r/il/bd12e4/3532004909/il_794xN.3532004909_4s7f.jpg",
+        "image": "Mystery-planet-afterplanet-blind-date.jpg"
+      }
+    },
+    {
+      "pk": 13,
+      "model": "products.product",
+      "fields": {
+        "sku": "ms4111123",
+        "name": "Red Rising Haemanthus Bookish Sticker",
+        "description": "Red Rising has loads of meaningful symbolism. Throughout the saga, the Haemanthus has popped up. With roots stretching back to Lykos, this flower has an intense meaning. Put this waterproof sticker on your laptop or favorite journal. Gift some stickers to your favorite bookish friend!",
+        "price": 3.50,
+        "category": 18,
+        "image_url": "https://i.etsystatic.com/10165646/r/il/50e16a/3339435177/il_794xN.3339435177_dyqj.jpg",
+        "image": "Red-Rising-Haemanthus-sticker.jpg"
+      }
+    },
+    {
+      "pk": 14,
+      "model": "products.product",
+      "fields": {
+        "sku": "ms4111124",
+        "name": "Shadow and Bone Gnome Sticker",
+        "description": "This sticker was inspired by the book trilogy Shadow and Bone. It has recently been turned into a top trending show on Netflix. I love Alina and what a fearless character she is. So this gnome is themed after her and her beautiful blue kefta. And let’s not forget Morozova’s antlers! This would be a perfect edition to any bookish style or the perfect gift for a Shadow and Bone fan.",
+        "price": 3.50,
+        "category": 18,
+        "image_url": "https://i.etsystatic.com/23906625/r/il/9b08e5/3054541016/il_794xN.3054541016_h9g6.jpg",
+        "image": "sun-gnome-sticker.jpg"
+      }
+    },
+    {
+      "pk": 15,
+      "model": "products.product",
+      "fields": {
+        "sku": "ms4111125",
+        "name": "A Court of Thorns and Roses Cauldron Vinyl Sticker ",
+        "description": "'Cauldron save you. Mother hold you. Pass through the gates, and smell that immortal land of milk and honey. Fear no evil. Feel no pain. Go, and enter eternity.' A Court Of Thorns and Roses inspired Vinyl Sticker with a witchy autumn twist to it!",
+        "price": 4.53,
+        "category": 18,
+        "image_url": "https://i.etsystatic.com/22793711/r/il/e99e73/3414341070/il_794xN.3414341070_943n.jpg",
+        "image": "acotar-steamy-qualdron-sticker.jpg"
+      }
+    },
+    {
+      "pk": 16,
+      "model": "products.product",
+      "fields": {
+        "sku": "ms4111126",
+        "name": "Reader Till I Die Sticker Vinyl Sticker",
+        "description": "Reader Till I Die Sticker, vinyl waterproof sticker",
+        "price": 3.12,
+        "category": 18,
+        "image_url": "https://i.etsystatic.com/28469937/r/il/fddbb7/3388313041/il_794xN.3388313041_sf18.jpg",
+        "image": "reader-till-i-die-sticker.jpg"
+      }
+    },
+    {
+      "pk": 17,
+      "model": "products.product",
+      "fields": {
+        "sku": "ms4111127",
+        "name": "Valkyrie Sticker",
+        "description": "'I am the rock against which the surf crashes. nothing can break me.' sticker inspired by Sarah J Maas’s A Court of Silver Flames. Matte finish. Waterproof.",
+        "price": 3.34,
+        "category": 18,
+        "image_url": "https://i.etsystatic.com/25412963/r/il/be694a/3182453346/il_794xN.3182453346_o4zd.jpg",
+        "image": "valkeryie-sword-sticker.jpg"
+      }
+    },
+    {
+      "pk": 18,
+      "model": "products.product",
+      "fields": {
+        "sku": "ms4111128",
+        "name": "Blind date with a book - English",
+        "description": "As a book lover, the idea of blind date with a book appealed to me immediately. The books are used, but in good condition. With each book, you receive a quote from the book written on an old Olympia typewriter. Bookmark included",
+        "price": 6.00,
+        "category": 19,
+        "image_url": "https://i.etsystatic.com/23227581/r/il/430dec/3512299585/il_794xN.3512299585_esp4.jpg",
+        "image": "english-book-blind-date.jpg"
+      }
+    },
+    {
+      "pk": 19,
+      "model": "products.product",
+      "fields": {
+        "sku": "ms4111129",
+        "name": "Eucalyptus Wreath",
+        "description": "Hang this prestige eucalyptus wreath for a natural appearance when adorning doors and decorating events! A lovely spread of leaves that can produce a decorative design for Wedding and Easter celebrations! The diameter of this wreath is approx. 30cm. ",
+        "price": 33.95,
+        "category": 6,
+        "image_url": "https://images.unsplash.com/photo-1544376936-e15fd353d311?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
+        "image": "eucalyptus-scissors-wreath.jpeg"
+      }
+    },
+    {
+      "pk": 20,
+      "model": "products.product",
+      "fields": {
+        "sku": "ms4111130",
+        "name": "Dried flower Wreath",
+        "description": "A beautiful dried flower wreath with an abundance of British grown flowers. Deep green and merlot hues with a lovely green velvet ribbon.",
+        "price": 83.00,
+        "category": 7,
+        "image_url": "https://i.etsystatic.com/10818918/r/il/5c8951/3252397224/il_794xN.3252397224_qnsk.jpg",
+        "image": "dried-flower-wreath.jpg"
+      }
+    },
+    {
+      "pk": 21,
+      "model": "products.product",
+      "fields": {
+        "sku": "ms4111131",
+        "name": "Orange flower and Eucalyptus wreath",
+        "description": "Hang this prestige wreath for a natural appearance when adorning doors and decorating events! A lovely spread of leaves that can produce a decorative design for indoors and outdoors! The diameter of this wreath is approx. 30cm. ",
+        "price": 39.65,
+        "category": 5,
+        "image_url": "https://images.unsplash.com/photo-1576172136744-9688efc8a1b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1026&q=80",
+        "image": "orange-flower-eucalyptus-wreath.jpeg"
+      }
+    },
+    {
+      "pk": 22,
+      "model": "products.product",
+      "fields": {
+        "sku": "ms4111132",
+        "name": "Dried fruits and Cinnamon Christmas wreath",
+        "description": "Handmade Wreath with Pinecones, Orange Slice, Cinnamon Sticks, Burlap Ribbon put together for A Fabulous Celebration. Nature Inspired Wreath. A Great Gift Idea. Would suit any bright coloured door. Hang in the hallway or indoor where the cinnamon fragrance will make you feel warm and festive. 40cm Diameter Wreath.",
+        "price": 65.00,
+        "category": 9,
+        "image_url": "https://images.unsplash.com/photo-1597755169166-b870c7ad0fa7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=715&q=80",
+        "image": "christmas-wreath.jpg"
+      }
+    },
+    {
+      "pk": 23,
+      "model": "products.product",
+      "fields": {
+        "sku": "ms4111133",
+        "name": "Halloween Wreath with Skulls",
+        "description": "Halloween black wreath with skulls, Black Eucalyptus and frosted asparagus to compliment. Spooky addition to door or wall! Please note - You can hang this on a front door or any door or drawer! This frame measures 20cm in diameter and then appears larger with the foliage & skulls. Prices reflect time design costs & attention to detail. I encourage you to check measurements to make sure it's the right size for you.",
+        "price": 39.55,
+        "category": 9,
+        "image_url": "https://i.etsystatic.com/15895109/r/il/a2f45c/3272572045/il_794xN.3272572045_h26i.jpg",
+        "image": "halloween-wreath.jpg"
+      }
+    },
+    {
+      "pk": 24,
+      "model": "products.product",
+      "fields": {
+        "sku": "ms4111134",
+        "name": "Handmade Spring Wreath",
+        "description": "This measures 30cm x 30cm. Handmade item.  Cream and Orange Peonies, Marigolds, Berries, Pinecones and Eucalyptus Stems. Please allow for slight colour variation from picture.",
+        "price": 57.71,
+        "category": 5,
+        "image_url": "https://i.etsystatic.com/17590463/r/il/a665ff/3276595150/il_794xN.3276595150_rl79.jpg",
+        "image": "spring-orange-wreath.jpg"
+      }
+    },
+    {
+      "pk": 25,
+      "model": "products.product",
+      "fields": {
+        "sku": "ms4111135",
+        "name": "Pampas foliage Winter Wreath",
+        "description": "This stunning dried flower Pampas Grass Wreath is the perfect addition to a modern Christmas set up, and shows that this year's big interiors trend isn't going anywhere this festive season!",
+        "price": 47.50,
+        "category": 8,
+        "image_url": "https://i.etsystatic.com/15004836/r/il/2d8dd1/3409434405/il_794xN.3409434405_g476.jpg",
+        "image": "Pampas-christmas-wreath.jpg"
+      }
+    },
+    {
+      "pk": 26,
+      "model": "products.product",
+      "fields": {
+        "sku": "ms4111136",
+        "name": "Dried Cotton Wreath",
+        "description": "Beautiful rustic wreath made from dried cotton heads on wire so can be shaped and styled. This piece is perfect for an autumn winter decor or why not add some fresh leaves and flowers for the spring summer!",
+        "price": 37.50,
+        "category": 7,
+        "image_url": "https://i.etsystatic.com/14049901/r/il/772efd/2202886541/il_794xN.2202886541_r0do.jpg",
+        "image": "dried-cotton-wreath.jpg"
+      }
+    },
+    {
+      "pk": 28,
+      "model": "products.product",
+      "fields": {
+        "sku": "ms4111138",
+        "name": "Leather Earrings",
+        "description": "Handmade beige and black leather earrings.",
+        "price": 46.50,
+        "category": 2,
+        "image_url": "https://images.unsplash.com/photo-1573227890085-12ab5d68a170?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=911&q=80",
+        "image": "leather-earrings.jpeg"
+      }
+    },
+    {
+      "pk": 29,
+      "model": "products.product",
+      "fields": {
+        "sku": "ms4111139",
+        "name": "White peal stud earrings",
+        "description": "Handmade white earring. Pearl effect. Small but elegant. Perfect for all occasion.",
+        "price": 29.00,
+        "category": 2,
+        "image_url": "https://images.unsplash.com/photo-1623303179820-de8ec58b03dc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80",
+        "image": "stud-white-earrings.jpeg"
+      }
+    },
+    {
+      "pk": 30,
+      "model": "products.product",
+      "fields": {
+        "sku": "ms4111140",
+        "name": "Dachshund gold loops",
+        "description": "Dachshund shaped gold lopps. Fun but elegant. Perfect for Dog loves.",
+        "price": 37.50,
+        "category": 2,
+        "image_url": "https://images.unsplash.com/photo-1624095149543-25c24ef2cafb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+        "image": "dog-gold-earring.jpeg"
+      }
+    },
+    {
+      "pk": 31,
+      "model": "products.product",
+      "fields": {
+        "sku": "ms4111141",
+        "name": "Gold plated opened loops",
+        "description": "Gold plated half moon shaped loops.",
+        "price": 25.00,
+        "category": 2,
+        "image_url": "https://images.unsplash.com/photo-1608508644127-ba99d7732fee?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80",
+        "image": "open-loop-earrings.jpeg"
+      }
+    },
+    {
+      "pk": 32,
+      "model": "products.product",
+      "fields": {
+        "sku": "ms4111142",
+        "name": "Zen Gold earrings",
+        "description": "They hang from a gold plated stud and feature an 18K gold plated loops. Lightweight statement earrings.",
+        "price": 28.00,
+        "category": 2,
+        "image_url": "https://images.unsplash.com/photo-1535556116002-6281ff3e9f36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=858&q=80",
+        "image": "zen-earrings.jpeg"
+      }
+    },
+    {
+      "pk": 33,
+      "model": "products.product",
+      "fields": {
+        "sku": "ms4111143",
+        "name": "Emeral and gold ring",
+        "description": "Emerald and gold ring with black stone background. Beautiful and ageless",
+        "price": 27.50,
+        "category": 1,
+        "image_url": "https://images.unsplash.com/photo-1602752250015-52934bc45613?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8aGFuZG1hZGUlMjByaW5nc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=700&q=60",
+        "image": "emerald-gold-ring.jpeg"
+      }
+    },
+    {
+      "pk": 34,
+      "model": "products.product",
+      "fields": {
+        "sku": "ms4111144",
+        "name": "Gold and silver ring",
+        "description": "A perfect handmade ring for those who can't decide if they rather gold or silver. Adjustable ring with 70 zirconia stones",
+        "price": 59.00,
+        "category": 1,
+        "image_url": "https://images.unsplash.com/photo-1602751584581-2e0372975b46?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDB8fGhhbmRtYWRlJTIwcmluZ3N8ZW58MHx8MHx8&auto=format&fit=crop&w=700&q=60",
+        "image": "gold-silver-ring.jpeg"
+      }
+    },
+    {
+      "pk": 35,
+      "model": "products.product",
+      "fields": {
+        "sku": "ms4111145",
+        "name": "Rose Gold Bracelet",
+        "description": "Rose gold plated bracelet. Delicate and elegant for any occasion. It streches for a perfect fit.",
+        "price": 47.50,
+        "category": 4,
+        "image_url": "https://images.unsplash.com/photo-1613470124212-8d2d0c791b53?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YnJhY2VsZXR8ZW58MHx8MHx8&auto=format&fit=crop&w=700&q=60",
+        "image": "rose-gold-beads-pearl-bracelet.jpeg"
+      }
+    },
+    {
+      "pk": 36,
+      "model": "products.product",
+      "fields": {
+        "sku": "ms4111146",
+        "name": "Opalite Beaded silver necklace,",
+        "description": "Pretty faceted and iridescent opalite drop feature design. Dainty, silver plated beaded chain, approx 15' shortest length. Lobster clasp and 2' extender to close. Perfect for layering with both chokers and long pendants.",
+        "price": 13.50,
+        "category": 3,
+        "image_url": "https://i.etsystatic.com/10267453/r/il/9f50d7/2207750606/il_794xN.2207750606_s7c0.jpg",
+        "image": "opalite-necklace.jpg"
+      }
+    },
+    {
+      "pk": 37,
+      "model": "products.product",
+      "fields": {
+        "sku": "ms4111147",
+        "name": "Bubble cube candle",
+        "description": "Hand cast bubble cube candle. Fruity fragrance. 100% rapeseed",
+        "price": 5.99,
+        "category": 13,
+        "image_url": "https://i.etsystatic.com/26803014/r/il/49b53d/2825867725/il_794xN.2825867725_ctqn.jpg",
+        "image": "bubble-candle.jpg"
+      }
+    },
+    {
+      "pk": 38,
+      "model": "products.product",
+      "fields": {
+        "sku": "ms4111148",
+        "name": "French Lavender & Wild Herbs Soy candle",
+        "description": "Our Soy Wax Candle is designed to be good to nature and great to you. We recycle water or wine bottles to fashion into the jars, We use eco wicks, cruelty free fragrances, no dyes and natural wax. This means a cleaner burning candle - less soot, less chemicals and less waste.",
+        "price": 15.00,
+        "category": 11,
+        "image_url": "https://i.etsystatic.com/16473066/r/il/55a81c/3136099547/il_794xN.3136099547_8y4x.jpg",
+        "image": "lavander-scent-candle.jpg"
+      }
+    },
+    {
+      "pk": 39,
+      "model": "products.product",
+      "fields": {
+        "sku": "ms4111149",
+        "name": "Orange Soy candle",
+        "description": "Our Soy Wax Candle is designed to be good to nature and great to you. We use eco wicks, cruelty free fragrances, no dyes and natural wax. This means a cleaner burning candle - less soot, less chemicals and less waste.",
+        "price": 17.00,
+        "category": 10,
+        "image_url": "https://i.etsystatic.com/26109213/r/il/eab624/3393448642/il_794xN.3393448642_os9u.jpg",
+        "image": "orange-vanilla-candle.jpg"
+      }
+    },
+    {
+      "pk": 40,
+      "model": "products.product",
+      "fields": {
+        "sku": "ms4111150",
+        "name": "Orange Vanilla Sandalwood Soy Candle",
+        "description": "Orange Vanilla Aromatherapy Candle with sweet orange, sandalwood, and vanilla essential oils. Citrus and woody Essential Oils help boost mood and relieve anxiety!",
+        "price": 15.00,
+        "category": 14,
+        "image_url": "https://i.etsystatic.com/32681724/r/il/c86d63/3525333049/il_794xN.3525333049_6yu3.jpg",
+        "image": "orange-pieces-candle.jpg"
+      }
+    },
+    {
+      "pk": 41,
+      "model": "products.product",
+      "fields": {
+        "sku": "ms4111151",
+        "name": "Thai Bamboo & Coconut - Soy Wax Candle",
+        "description": "Our Soy Wax Candle is designed to be good to nature and great to you. We recycle water or wine bottles to fashion into the jars, We use eco wicks, cruelty free fragrances, no dyes and natural wax. This means a cleaner burning candle - less soot, less chemicals and less waste.",
+        "price": 15.00,
+        "category": 12,
+        "image_url": "https://i.etsystatic.com/16473066/r/il/70360f/3088322820/il_794xN.3088322820_2q7r.jpg",
+        "image": "bamboo-coconut-candle.jpg"
+      }
+    },
+    {
+      "pk": 42,
+      "model": "products.product",
+      "fields": {
+        "sku": "ms4111152",
+        "name": "Rustic Bookstore Soy candle",
+        "description": "made using 100% natural, cruelty-free, eco-friendly, vegan materials. Our soy wax is made from pure soybean oil and contains no toxins, pesticides, carcinogens or pollutants, which results in a clean, longer burning candle.",
+        "price": 12.00,
+        "category": 15,
+        "image_url": "https://i.etsystatic.com/16981731/r/il/602a6e/2726973901/il_794xN.2726973901_hnqq.jpg",
+        "image": "rustic-bookstore-candle.jpg"
+      }
+    },
+    {
+      "pk": 43,
+      "model": "products.product",
+      "fields": {
+        "sku": "ms4111153",
+        "name": "The Burrow HP Candle",
+        "description": "The Burrow has a beautiful smell of fresh laundry - cotton and linen - with soft balsamic notes and a sweet blend of florals such as gardenia, lavender, amber, violet and lily of the valley. I just know that Mr and Mrs Weasley would love it!",
+        "price": 32.00,
+        "category": 15,
+        "image_url": "https://i.etsystatic.com/5578585/r/il/262051/2656987695/il_794xN.2656987695_lb7f.jpg",
+        "image": "the-burrow-hp-candle.jpg"
+      }
+    }
+]

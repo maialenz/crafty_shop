@@ -1,0 +1,154 @@
+[
+    {
+      "pk": 1,
+      "model": "products.category",
+      "fields": {
+        "name": "rings",
+        "friendly_name": "Rings"
+      }
+    },
+    {
+      "pk": 2,
+      "model": "products.category",
+      "fields": {
+        "name": "earrings",
+        "friendly_name": "Earrings"
+      }
+    },
+    {
+      "pk": 3,
+      "model": "products.category",
+      "fields": {
+        "name": "necklaces",
+        "friendly_name": "Necklaces"
+      }
+    },
+    {
+      "pk": 4,
+      "model": "products.category",
+      "fields": {
+        "name": "bracelets",
+        "friendly_name": "Bracelets"
+      }
+    },
+    {
+      "pk": 5,
+      "model": "products.category",
+      "fields": {
+        "name": "spring",
+        "friendly_name": "Spring"
+      }
+    },
+    {
+      "pk": 6,
+      "model": "products.category",
+      "fields": {
+        "name": "summer",
+        "friendly_name": "Summer"
+      }
+    },
+    {
+      "pk": 7,
+      "model": "products.category",
+      "fields": {
+        "name": "autumn",
+        "friendly_name": "Autumn"
+      }
+    },
+    {
+      "pk": 8,
+      "model": "products.category",
+      "fields": {
+        "name": "winter",
+        "friendly_name": "Winter"
+      }
+    },
+    {
+      "pk": 9,
+      "model": "products.category",
+      "fields": {
+        "name": "occasions",
+        "friendly_name": "Occasions"
+      }
+    },
+    {
+        "pk": 10,
+        "model": "products.category",
+        "fields": {
+          "name": "citrus",
+          "friendly_name": "Citrus"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "products.category",
+        "fields": {
+          "name": "floral",
+          "friendly_name": "Floral"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "products.category",
+        "fields": {
+          "name": "fresh",
+          "friendly_name": "Fresh"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "products.category",
+        "fields": {
+          "name": "fruity",
+          "friendly_name": "Fruity"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "products.category",
+        "fields": {
+          "name": "woody",
+          "friendly_name": "Woody"
+        }
+    },
+    {
+        "pk": 15,
+        "model": "products.category",
+        "fields": {
+          "name": "bookish",
+          "friendly_name": "Bookish"
+        }
+    },
+    {
+        "pk": 16,
+        "model": "products.category",
+        "fields": {
+          "name": "sleeves",
+          "friendly_name": "Book Sleeves"
+        }
+    },
+    {
+        "pk": 17,
+        "model": "products.category",
+        "fields": {
+          "name": "bookmarks",
+          "friendly_name": "Bookmarks"
+        }
+    },
+    {
+        "pk": 18,
+        "model": "products.category",
+        "fields": {
+          "name": "stickers",
+          "friendly_name": "Stickers"
+        }
+    },
+    {
+        "pk": 19,
+        "model": "products.category",
+        "fields": {
+          "name": "blind_date",
+          "friendly_name": "Blind-Date Books"
+        }
+    }
+  ]
