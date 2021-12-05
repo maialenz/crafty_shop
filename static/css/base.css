@@ -35,7 +35,6 @@ body {
     min-width: 260px;
 }
 
-
 .btn-black {
     background: black;
     color: white;
@@ -68,6 +67,24 @@ body {
     background: #c8d5ea !important;
 }
 
+/*--------------Overlay - BA ------------------*/
+.overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: #fff;
+    z-index: -1;
+}
+
+/*----Taken from stackoverflow to make all card-images same size---*/
+.card-img-top {
+    width: 100%;
+    height: 20vw;
+    object-fit: cover;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -75,19 +92,29 @@ body {
     .container {
       max-width: 80%;
     }
-  }
+}
   
-  /* fixed top navbar only on medium and up */
-  @media (min-width: 992px) {
-      .fixed-top-desktop-only {
-          position: fixed;
-          top: 0;
-          right: 0;
-          left: 0;
-          z-index: 1030;
-      }
-  
-      .header-container {
-          padding-top: 164px;
-      }
-  }
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 164px;
+    }
+}
+
+/* increase height vw for small and extra small screens to keep
+images same size */
+@media (max-width: 700px) {
+    .card-img-top {
+        width: 100%;
+        height: 50vw;
+        object-fit: cover;
+    }
+}
