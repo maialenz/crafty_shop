@@ -91,6 +91,19 @@ a.category-badge > span.badge:hover {
     color: #3f3a4f;
 }
 
+/*---------Up arrow button ------------*/
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.btt-link {
+    cursor: pointer;
+}
+
 /*----Taken from stackoverflow to make all card-images same size---*/
 .card-img-top {
     width: 100%;

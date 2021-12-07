@@ -36,7 +36,7 @@
       "model": "products.category",
       "fields": {
         "name": "spring",
-        "friendly_name": "Spring"
+        "friendly_name": "Spring Wreaths"
       }
     },
     {
@@ -44,15 +44,15 @@
       "model": "products.category",
       "fields": {
         "name": "summer",
-        "friendly_name": "Summer"
+        "friendly_name": "Summer Wreaths"
       }
     },
     {
       "pk": 7,
-      "model": "products.category",
+      "model": "products.category Wreaths",
       "fields": {
         "name": "autumn",
-        "friendly_name": "Autumn"
+        "friendly_name": "Autumn Wreaths"
       }
     },
     {
@@ -60,7 +60,7 @@
       "model": "products.category",
       "fields": {
         "name": "winter",
-        "friendly_name": "Winter"
+        "friendly_name": "Winter Wreaths"
       }
     },
     {
@@ -68,7 +68,7 @@
       "model": "products.category",
       "fields": {
         "name": "occasions",
-        "friendly_name": "Occasions"
+        "friendly_name": "Occasions Wreaths"
       }
     },
     {
@@ -76,7 +76,7 @@
         "model": "products.category",
         "fields": {
           "name": "citrus",
-          "friendly_name": "Citrus"
+          "friendly_name": "Citrus Candles"
         }
     },
     {
@@ -84,7 +84,7 @@
         "model": "products.category",
         "fields": {
           "name": "floral",
-          "friendly_name": "Floral"
+          "friendly_name": "Floral Candles"
         }
     },
     {
@@ -92,7 +92,7 @@
         "model": "products.category",
         "fields": {
           "name": "fresh",
-          "friendly_name": "Fresh"
+          "friendly_name": "Fresh Candles"
         }
     },
     {
@@ -100,7 +100,7 @@
         "model": "products.category",
         "fields": {
           "name": "fruity",
-          "friendly_name": "Fruity"
+          "friendly_name": "Fruity Candles"
         }
     },
     {
@@ -108,7 +108,7 @@
         "model": "products.category",
         "fields": {
           "name": "woody",
-          "friendly_name": "Woody"
+          "friendly_name": "Woody Candles"
         }
     },
     {
@@ -116,7 +116,7 @@
         "model": "products.category",
         "fields": {
           "name": "bookish",
-          "friendly_name": "Bookish"
+          "friendly_name": "Bookish Candles"
         }
     },
     {
