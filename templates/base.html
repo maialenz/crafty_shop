@@ -64,18 +64,13 @@
 <body>
 
     <header class="container-fluid fixed-top">
-        <!--Discount Banner -->
-		<div id="discount-banner" class="row text-center">
-			<div class="col bg-purple text-white">
-				<h4 class="logo-font my-1" id="discount-banner-text"><marquee>Free shipping on orders over €{{ delivery_threshold }}!</marquee></h4>
-			</div>
-		</div>
+
 
 		<div id="topnavbar" class="row bg-white pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <!--Shop Name-->
                 <a href="{% url 'home' %}" class="nav-link main-logo-link hvr-grow">
-                    <h2 class="logo-font text-blue my-0"><i class="fab fa-pagelines fa-flip-horizontal"></i> The <strong>Crafty</strong> Shop <i class="fab fa-pagelines"></i> </h2>
+                    <h2 class="logo-font text-blue my-0" id="main-logo"><i class="fab fa-pagelines fa-sm fa-flip-horizontal"></i> The <strong>Crafty</strong> Shop <i class="fab fa-sm fa-pagelines"></i> </h2>
                 </a>
             </div>
 
@@ -151,8 +146,8 @@
     
     	<!-- Navbar -->
 		<div class="row bg-white">
-			<nav class="navbar navbar-expand-lg navbar-light w-100">
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+			<nav class="navbar navbar-expand-lg navbar-light w-100  ">
+				<button class="navbar-toggler float-left" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<!-- Main-nav and mobile-top-header menu templates-->
@@ -161,6 +156,12 @@
 			</nav>
 		</div>
 
+		<!--Discount Banner -->
+		<div id="discount-banner" class="row text-center">
+			<div class="col bg-purple text-white">
+				<h4 class="logo-font my-1" id="discount-banner-text">Free shipping on orders over €{{ delivery_threshold }}!</h4>
+			</div>
+		</div>
 		
 
 	</header>

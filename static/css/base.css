@@ -28,6 +28,10 @@ body {
     width: fit-content;
 }
 
+#main-logo {
+    font-size: 1.5rem !important;
+}
+
 .to-shop-button {
     background: #3e6234 /* #c8d5ea #643e4d #42656a #3f3a4f #a58e96*/;
     color: white;
@@ -54,6 +58,9 @@ body {
     color: #3f3a4f !important;
 }
 
+.text-black {
+    color: #000 !important;
+}
 .border-gray {
     border: 1px solid gray !important;
 }
@@ -76,6 +83,12 @@ body {
     position: fixed;
     background: #fff;
     z-index: -1;
+}
+
+/* ------- category badges ----------*/
+a.category-badge > span.badge:hover {
+    background: #c8d5ea;
+    color: #3f3a4f;
 }
 
 /*----Taken from stackoverflow to make all card-images same size---*/
