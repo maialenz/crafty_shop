@@ -223,6 +223,10 @@ a.category-badge > span.badge:hover {
     overflow-y: auto;
 }
 
+.bg-blue {
+    background: #c8d5ea;
+    color: #343a40;
+}
 /* -------------------------------- Media Queries */
 
 
@@ -270,12 +274,11 @@ images same size */
 }
 
 
-/* smaller vw for images on xl screens */
+/* reduce vw for images on xl screens */
 @media (min-width: 1200px) {
     .card-img-top {
         width: 100%;
         height: 20vw;
         object-fit: cover;
     }
-    
 }
