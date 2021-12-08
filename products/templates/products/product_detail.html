@@ -103,8 +103,5 @@
 
 {% block postloadjs %}
     {{ block.super }}
-    <!-- Back to Top Js -->
-    <script src="{% static 'js/back_up.js' %}"></script>
-    <!--Quantity button Js-->
-    <script src="{% static 'js/quantity_input.js' %}"></script>
+    {% include 'products/includes/quantity_input_script.html' %}
 {% endblock %}
