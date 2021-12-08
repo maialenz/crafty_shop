@@ -45,11 +45,6 @@ body {
     color: white;
 }
 
-.btn-blue {
-    background:#3f3a4f;
-    color: #fff !important;
-}
-
 .btn-outline-blue {
     background:#fff;
     color: #3f3a4f !important;
