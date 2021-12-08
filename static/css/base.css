@@ -32,8 +32,9 @@ body {
     font-size: 1.5rem !important;
 }
 
+/*------BUTTONS------*/
 .to-shop-button {
-    background: #3e6234 /* #c8d5ea #643e4d #42656a #3f3a4f #a58e96*/;
+    background: #3f3a4f;
     color: white;
     font-weight: 600;
     min-width: 260px;
@@ -42,6 +43,25 @@ body {
 .btn-black {
     background: black;
     color: white;
+}
+
+.btn-blue {
+    background:#3f3a4f;
+    color: #fff !important;
+}
+
+.btn-outline-blue {
+    background:#fff;
+    color: #3f3a4f !important;
+    border: 1px solid gray; 
+}
+
+
+.btn-outline-blue:hover,
+.btn-outline-blue:active,
+.btn-outline-blue:focus {
+    background: #c8d5ea;
+    color: #3f3a4f;
 }
 
 .shop-now-button:hover,
