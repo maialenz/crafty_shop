@@ -40,6 +40,7 @@ body {
     min-width: 260px;
 }
 
+
 .btn-black {
     background: black;
     color: white;
@@ -80,11 +81,13 @@ body {
     border: 1px solid gray !important;
 }
 
+/*----Discount banner------*/
 #discount-banner-text {
     font-size: 1rem;
     color: #3f3a4f !important;
     font-weight: 800;
 }
+
 .bg-purple {
     background: #c8d5ea !important;
 }
