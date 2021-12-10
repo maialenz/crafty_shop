@@ -186,7 +186,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Variables to calculate Delivery cost
 FREE_DELIVERY_THRESHOLD = 25
-STANDARD_DELIVERY = 3.99
+STANDARD_DELIVERY_PERCENTAGE = 10
 
 # Stripe
 STRIPE_CURRENCY = 'eur'
