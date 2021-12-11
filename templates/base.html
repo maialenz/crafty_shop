@@ -110,7 +110,7 @@
 							{% if request.user.is_authenticated %}
 							{% if request.user.is_superuser %}
 							<!-- user authenticated AND SUPERUSER -->
-							<a href="" class="dropdown-item">Service Management</a>
+							<a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
 							{% endif %}
 							<!--  user authenticated -->
 							<a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
