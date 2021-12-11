@@ -199,12 +199,21 @@
     <div class="container center-align">
         <div class="row">
             <div class="col text-center">
+            {% if from_profile %}
+            <a href="{% url 'profile' %}" class="btn btn-blue hvr-grow rounded my-2">
+                <span class="icon mr-2">
+                    <i class="fas fa-gifts"></i>
+                </span>
+                <span class="text-uppercase"><strong>Back to Profile</strong></span>
+            </a>
+            {% else %}
             <a href="{% url 'products' %}" class="btn btn-blue hvr-grow rounded my-2">
                 <span class="icon mr-2">
                     <i class="fas fa-gifts"></i>
                 </span>
                 <span class="text-uppercase"><strong>Continue searching for gift ideas!</strong></span>
             </a>
+            {% endif %}
             </div>
        </div>
     </div>
