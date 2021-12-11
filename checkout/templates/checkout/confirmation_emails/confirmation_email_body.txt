@@ -1,0 +1,25 @@
+WE HAVE RECEIVED YOUR ORDER, {{ order.full_name|upper }}!!
+
+Thank you very much for shopping in our little shop! You will find a summary of your recent purchase below.
+Please allow 4-5 business days to process and ship your order. We are making sure your product is 
+perfectly wrapped for you. The transit time will vary based on your location.
+
+
+Order Number: {{ order.order_number }}
+Order Date: {{ order.date }}
+
+Order Total: ${{ order.order_total }}
+Delivery: ${{ order.delivery_cost }}
+Grand Total: ${{ order.grand_total }}
+
+Your order will be shipped to {{ order.street_address1 }} in {{ order.town_or_city }}, {{ order.country }}.
+
+We've got your phone number on file as {{ order.phone_number }}.
+
+If you have any questions, please do not hesitate to message us at {{ contact_email }}. We will always be happy to help!
+
+We hope you love your new gifts! 
+
+Sincerely,
+
+Mai's Crafty Shop
