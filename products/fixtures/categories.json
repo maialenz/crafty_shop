@@ -49,7 +49,7 @@
     },
     {
       "pk": 7,
-      "model": "products.category Wreaths",
+      "model": "products.category",
       "fields": {
         "name": "autumn",
         "friendly_name": "Autumn Wreaths"
