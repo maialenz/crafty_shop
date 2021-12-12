@@ -1,1 +1,1 @@
-web: gunicorn crafty_shop.wsgi:application
+web: gunicorn crafty-shop.wsgi:application
