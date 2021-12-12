@@ -74,12 +74,18 @@
                                                     <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
                                                 </a>
                                             </p>
-                                            {% endif %}
+                                            {% endif %}  
                                         </div>
-                                    <div class="row">
-                                        <input type="submit" class="btn btn-sm btn-light btn-blue hvr-grow rounded text " value="Add to Bag">
-                                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                                    </div>
+                                        {% if request.user.is_superuser %}
+                                        <div class="col">
+                                            <small class="ml-3  float-right">
+                                                <a class="hvr-grow btn-info btn-sm" href="{% url 'edit_product' product.id %}">Edit</a>
+                                                <strong class="text-black"> | </strong>
+                                                <a class="btn-danger btn-sm text-white hvr-grow" href="{% url 'delete_product' product.id %}"><i class="far fa-trash-alt fa-sm"></i></a>
+                                            </small>
+                                        </div>
+                                        {% endif %}
+                                    
                                     </div>
                                 </div>
 
