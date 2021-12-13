@@ -142,9 +142,78 @@
                 <h2 class="review-header mb-5">Reviews</h2>
             </div>
             <div class="col-12 col-lg-5 mb-5">
-                <form action="" method='post' id="review-form">
+                {% if request.user.is_authenticated %}
+                <form action="{% url 'add_review' product.id %}" method='POST' id="review-form" >
                     {% csrf_token %}
+                    <div class="form-group mb-3">
+                        <label for="rating">Product Rating</label>
+                        <select name="rating" id="rating" class="form-control">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5" selected>5</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="content">Tell us about your product!</label>
+                    </div>
+                    <div class="form-group mb-3">
+                        <textarea name="content" id="content" cols="30" rows="5"  class="rounded form-control border" required>
+
+                        </textarea>
+                    </div>
+                    <button type="submit" class="btn btn-black btn-add hvr-grow" id="submit-review">Post Review</button>
                 </form>
+                {% else %}
+                <h3>
+                    You can leave a review once you
+                    <a href="{% url 'account_login' %}" class="text-blue hvr-grow">Login</a> 
+                    to your profile or you
+                    <a href="{% url 'account_signup' %}" class="text-blue hvr-grow">Register</a>
+                    for an account.
+                </h3>
+                {% endif %}
+            </div>
+            <div class="col-12 col-lg-6 offset-lg-1">
+                {% for review in product.reviews.all %}
+                    <div class="review-rating">
+                        {% if review.rating == 1 %}
+                            <i class="fas fa-star"></i>
+                        {% elif review.rating == 2 %}
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        {% elif review.rating == 3 %}
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        {% elif review.rating == 4 %}
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        {% elif review.rating == 5 %}
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        {% endif %}
+                    </div>
+                    <div class="review-content">
+                        <p>"{{ review.content }}"</p>
+                    </div>
+                    <div class="review-user">
+                        <p><em>{{ review.user }}</em></p>
+                        <p><em>{{ review.date_added|date:"d-m-Y" }}</em></p>
+                    </div>
+                    <hr>
+                {% empty %}
+                <div>
+                    <h5><em>Be the first one to review this product!</em></h5>
+                </div>
+                {% endfor %}
             </div>
         </div>
     </div>
@@ -153,14 +222,16 @@
 
 {% block postloadjs %}
     {{ block.super }}
-    <script type="text/javascript">
-    let deleteModal = document.getElementById('#deteleProductModal')
-    // let myInput = document.getElementById('myInput')
-
-    myModal.addEventListener('shown.bs.modal', function () {
-        myInput.focus()
-    })
-    </script>
     {% include 'products/includes/quantity_input_script.html' %}
 
+    </script>
+    <!--JS to activate Modal-->
+    <script type="text/javascript">
+        let deleteModal = document.getElementById('#deteleProductModal')
+
+        myModal.addEventListener('shown.bs.modal', function () {
+            myInput.focus()
+    })
+    </script>
+    
 {% endblock %}

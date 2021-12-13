@@ -93,7 +93,7 @@ body {
     border: 1px solid gray !important;
 }
 
-/*----Discount banner------*/
+/*----Delivery banner------*/
 #discount-banner-text {
     font-size: 1rem;
     color: #3f3a4f !important;
@@ -232,6 +232,12 @@ input[name='q']::placeholder {
     color: #343a40;
 }
 
+/* Review Container */
+
+.review-rating {
+    color: #b2c3de;
+    font-size: 1.2rem;
+}
 
 /* Allauth form */
 
