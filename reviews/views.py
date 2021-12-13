@@ -13,7 +13,7 @@ def add_review(request, product_id):
     ''' Get product object and create review '''
     product = get_object_or_404(Product, pk=product_id)
 
-    if request.methog == 'POST' and request.user.is_authenticated:
+    if request.method == 'POST' and request.user.is_authenticated:
         rating = request.POST.get('rating', '')
         content = request.POST.get('content', '')
         review = ProductReview.objects.create(
