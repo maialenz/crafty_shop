@@ -43,34 +43,32 @@
                     <small>
                         <a class=" mt-3 hvr-grow btn-info btn-sm" href="{% url 'edit_product' product.id %}">Edit</a>
                         <span class="text-black mr-1 ml-1 "><strong"> | </strong></span>
-                        <button type="button" class="mt-3 btn-danger btn-sm text-white hvr-grow" data-toggle="modal" data-target="#deleteProductModal">Delete</button>
-                       
+                        <button type="button" class="mt-3 btn-danger btn-sm text-white hvr-grow" data-toggle="modal" data-target="#deleteProductModal">Delete</button>                      
                     </small>
+
                      <!--Confirm delete modal taken from Bootstrap-->
-                     <div class="modal fade" id="deleteProductModal" data-backdrop="static" data-keyboard="false" tabindex="-1"
-                     aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                     <div class="modal-dialog">
-                         <div class="modal-content">
-                             <div class="modal-header">
-                                 <h5 class="modal-title" id="staticBackdropLabel">Delete Product</p>
-                                 <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
-                             </div>
-                             <div class="modal-body">
-                                 <p>Are you sure you want to delete this product?</p>
-                                 <p>This change is irreversible</p>
-                             </div>
-                             <div class="modal-footer">
+                    <div class="modal fade" id="deleteProductModal" data-backdrop="static" data-keyboard="false" tabindex="-1"
+                        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Delete Product</p>
+                                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Are you sure you want to delete this product?</p>
+                                <p>This change is irreversible</p>
+                            </div>
+                            <div class="modal-footer">
                                  <button type="button" class="mt-3 hvr-grow btn-info btn" data-dismiss="modal">Cancel</button>
                                  <a href="{% url 'delete_product' product.id %}" class="mt-3 btn-danger btn text-white hvr-grow">Delete</a>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-             <!-- End of Confirm delete modal -->
+                            </div>
+                        </div>
+                    </div>              
+                    <!-- End of Confirm delete modal -->
                 
                     {% endif %}
                 
-
                     <p class="mt-3">{{ product.description }}</p>
                     <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                         {% csrf_token %}
@@ -157,7 +155,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="content">Tell us about your product!</label>
+                        <label for="content">Tell us about the product you bought!</label>
                     </div>
                     <div class="form-group mb-3">
                         <textarea name="content" id="content" cols="30" rows="5"  class="rounded form-control border" required>
@@ -206,7 +204,7 @@
                     </div>
                     <div class="review-user">
                         <p><em>{{ review.user }}</em></p>
-                        <p><em>{{ review.date_added|date:"d-m-Y" }}</em></p>
+                        <p><em>{{ review.date_added|date:"d/m/Y" }}</em></p>
                     </div>
                     <hr>
                 {% empty %}
