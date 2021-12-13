@@ -16,5 +16,8 @@ class ProductReview(models.Model):
     content = models.TextField(blank=True, null=True)
     rating = models.IntegerField()
 
-    posting_date = models.DateTimeField(auto_now_add=True)
+    date_added = models.DateTimeField(auto_now_add=True)
 
+    class Meta:
+        """ Order reviews by descending date added """
+        ordering = ['date_added']
