@@ -67,7 +67,6 @@
 
     <header class="container-fluid fixed-top">
 
-
 		<div id="topnavbar" class="row bg-white pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <!--Shop Name-->
@@ -96,17 +95,25 @@
 			<div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
 				<ul class="list-inline list-unstyled text-center text-lg-right my-0">
 
+					<!--Blog -->
+					<li class="list-inline-item">
+						<a href="" class="text-blue nav-link">
+							<div class="hvr-grow text-center"><i class="fas fa-feather"></i></div>
+							<p class="my-0">Blog</p>
+						</a>
+					</li>
+
 					<!-- User Account -->
 					<li class="list-inline-item dropdown">
 						<a class="text-blue nav-link" href="#" id="user-options" data-toggle="dropdown"
 							aria-haspopup="true" aria-expanded="false">
 							<div class="text-center">
-								<div class="hvr-grow"><i class="fas fa-user fa-lg "></i></div>
-								<p class="my-0">My Account</p>
+								<div class="hvr-grow"><i class="fas fa-user"></i></div>
+								<p class="my-0">Accounts</p>
 							</div>
 						</a>
 						<!-- User Account Menu -->
-						<div class="dropdown-menu border-0" aria-labelledby="user-options">
+						<div class="dropdown-menu border" aria-labelledby="user-options">
 							{% if request.user.is_authenticated %}
 							{% if request.user.is_superuser %}
 							<!-- user authenticated AND SUPERUSER -->
@@ -123,13 +130,14 @@
 						</div>
 					</li>
 
+					
 					<!-- Shopping Bag with Grand Total-->
 					<li class="list-inline-item">
 						<!-- If item is in the bag, display a list of items included -->
 						<a class="{% if grand_total %}text-info font-weight-bold{% else %}text-blue{% endif %} nav-link"
 							href="{% url 'view_bag' %}">
 							<div class="text-center">
-								<div class="hvr-grow"><i class="fas fa-shopping-bag fa-lg"></i></div>
+								<div class="hvr-grow"><i class="fas fa-shopping-bag"></i></div>
 								<p class="my-0">
 									<!-- Display grand total in 2 decimals format -->
 									{% if grand_total %}
@@ -141,7 +149,6 @@
 							</div>
 						</a>
 					</li>
-
 				</ul>
 			</div>
         </div>
@@ -165,7 +172,6 @@
 			</div>
 		</div>
 		
-
 	</header>
 
     {% if messages %}

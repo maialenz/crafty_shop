@@ -1,6 +1,43 @@
 <div class="collapse navbar-collapse" id="main-nav">
 	<ul class="navbar-nav w-auto mx-auto">
+		<li class="nav-item d-lg-none">
+			<a class="logo-font font-weight-bold nav-link text-black mb-0 mr-5" href="#" id="mobile-search" data-toggle="dropdown"
+				aria-haspopup="true" aria-expanded="false">
+				<div>
+					<div><i class="fas fa-search hvr-grow"></i></div>
+				</div>
+			</a>
+			<div class="dropdown-menu border-0 w-100 p-3 rounded my-0" aria-labelledby="mobile-search">
+				<form class="form" method="GET" action="{% url 'products' %}">
+					<div class="input-group w-100">
+						<input class="form-control border rounded " type="text" name="q" placeholder="Search our shop">
+						<div class="input-group-append">
+							<button class="form-control btn btn-blue border rounded hvr-grow" type="submit">
+								<span class="icon">
+									<i class="fas fa-search fa-sm hvr-glow"></i>
+								</span>
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>		
+        </li>
+		<li> <hr> </li>
+
+		<li class="nav-item d-lg-none">
+            <a class="logo-font font-weight-bold nav-link text-black mb-0 mr-5" href="{% url 'home' %}" id="home-link">
+                Home
+            </a>
+        </li>
 	
+		<li class="nav-item d-lg-none">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'blog' %}" id="blog-link">
+                Blog
+            </a>
+			
+        </li>
+		<li> <hr> </li>
+		
 		<li class="nav-item dropdown">
 			<a class="logo-font font-weight-bold nav-link mr-5 hvr-grow" href="#" id="all-products-link" data-toggle="dropdown"
 				aria-haspopup="true" aria-expanded="false">
@@ -75,4 +112,5 @@
 		</li>
        
 	</ul>
+
 </div>
