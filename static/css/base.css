@@ -32,7 +32,18 @@ body {
     font-size: 1.5rem !important;
 }
 
-/*------BUTTONS------*/
+/*------BUTTONS & Hover/active actions------*/
+
+.add-post-button:hover{
+    text-decoration: none;
+    color: #fff !important;
+}
+
+
+.to-shop-button:hover {
+    color: #fff !important;
+}
+
 .to-shop-button {
     background: #3f3a4f;
     color: white;
