@@ -34,7 +34,7 @@ body {
 
 /*------BUTTONS & Hover/active actions------*/
 
-.add-post-button:hover{
+.post-button:hover{
     text-decoration: none;
     color: #fff !important;
 }
