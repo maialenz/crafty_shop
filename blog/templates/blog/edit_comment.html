@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-10 offset-1">
+                <hr class="break-md">
+                <h4 class="text-center title-font">Edit a Post</h4>
+                <hr class="break-md">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-10 offset-1">
+                <form method="POST" action="{% url 'edit_post' post.id %}" class="form mb-2" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form | crispy }}
+                    <div class="text-right">
+                        <a class="btn site-btn" href="{% url 'posts' %}">Cancel</a>
+                        <button class="btn site-btn" type="submit">Update Post</button>
+                    </div>
+                </form>
+            </div>            
+        </div>
+    </div>
+{% endblock %}
