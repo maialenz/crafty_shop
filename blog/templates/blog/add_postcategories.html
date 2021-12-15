@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+<a href="{% url 'postcategories' %}" class="btn post-button btn-blue mt-5 ml-5 rounded hvr-grow border-gray bn-bg"><i class="fas fa-angle-double-left"></i></a>
+    <div class="container">
+        <div class="row">
+            <div class="col-8 offset-2">
+                <hr class="break-md">
+                <h4 class="text-center title-font">Add New Category</h4>
+                <hr class="break-md">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-8 offset-2">
+                <form method="POST" action="{% url 'add_postcategory' %}" class="form mb-2">
+                    {% csrf_token %}
+                    {{ form | crispy }}
+                    <div class="text-right">
+                        <a class="btn btn-blue hvr-grow rounded" href="{% url 'postcategories' %}">Cancel</a>
+                        <button class="btn btn-black hvr-grow rounded" type="submit">Add Category</button>
+                    </div>
+                </form>
+            </div>            
+        </div>
+    </div>
+{% endblock %}
