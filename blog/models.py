@@ -1,4 +1,5 @@
 from django.db import models
+from .widgets import CustomClearableFileInput
 from django.contrib.auth.models import User
 
 
