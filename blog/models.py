@@ -1,6 +1,7 @@
 from django.db import models
-from .widgets import CustomClearableFileInput
 from django.contrib.auth.models import User
+from .widgets import CustomClearableFileInput
+
 
 
 class Postcategory(models.Model):
@@ -28,7 +29,7 @@ class Post(models.Model):
     postcategory = models.ForeignKey('Postcategory', null=True, blank=True,
                                      on_delete=models.SET_NULL)
     title = models.CharField(max_length=200, unique=True)
-    subtitle = models.CharField(max_length=150, default='SubTitle')
+    subtitle = models.CharField(max_length=150, default='')
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE,
                                related_name='blog_posts')
@@ -37,7 +38,7 @@ class Post(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
-    image = models.ImageField(null=True, blank=True)
+    image = models.ImageField(null=True, blank=False)
 
     class Meta:
         ordering = ['-created_on']
