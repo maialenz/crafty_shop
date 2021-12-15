@@ -10,15 +10,23 @@
 <h2 class="logo-font mb-4 text-center">{% trans "Logout" %}</h2>
 <hr>
 
-<p>{% trans 'Are you sure you want to sign out?' %}</p>
+<p class="text-center">{% trans 'Are you sure you want to sign out?' %}</p>
 
 <form method="post" action="{% url 'account_logout' %}">
   {% csrf_token %}
   {{ form|crispy }}
   {% if redirect_field_value %}
-  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
+    <div class="row">
+      <div class="col text-center">
+        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
+      </div>
+    </div>
   {% endif %}
-  <button class="btn btn-black hvr-grow rounded border-light center-align" type="submit">{% trans 'Sign Out' %}</button>
+  <div class="row">
+    <div class="col text-center">
+      <button class="btn btn-black hvr-grow rounded border-light center-align" type="submit">{% trans 'Sign Out' %}</button>
+    </div>
+  </div>
 </form>
 
 

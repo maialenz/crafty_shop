@@ -32,7 +32,7 @@ for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
 
 {% else %}
 <p>{% blocktrans %}If you have not created an account yet, then please
-<a href="{{ signup_url }}">Register</a> first.{% endblocktrans %}</p>
+<a href="{{ signup_url }}" class="hvr-grow">Register</a> first.{% endblocktrans %}</p>
 {% endif %}
 
 <form class="login justify-content-center" method="POST" action="{% url 'account_login' %}">
@@ -41,11 +41,15 @@ for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
   {% if redirect_field_value %}
   <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
   {% endif %}
-  <button class="primaryAction btn btn-black hvr-grow rounded border-light center-align" type="submit">{% trans "Login" %}</button>
-  <a href="{% url 'home' %}" class="btn btn-blue hvr-grow">Home</a>
-  <p>
-    <a class="secondaryAction justify-content-center hvr-grow" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
-  </p>
+  <div class="row">
+      <div class="col text-center">
+          <button class="primaryAction btn btn-black hvr-grow rounded border-light center-align" type="submit">{% trans "Login" %}</button>
+          <a href="{% url 'home' %}" class="btn btn-blue hvr-grow">Home</a>
+          <p>
+            <a class="secondaryAction justify-content-center hvr-grow" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+          </p>
+      </div>
+  </div>
 </form>
 
 {% endblock %}
