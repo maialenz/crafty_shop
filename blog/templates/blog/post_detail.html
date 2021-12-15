@@ -34,7 +34,7 @@
                         </a>
                         {% else %}
                         <a href="">
-                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="Post Image not available">
+                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}blognoimage.png" alt="Post Image not available">
                         </a>
                     {% endif %}
                 </div>
@@ -75,12 +75,11 @@
                 {% for comment in comments %}
                 <div class="comments font-fold blog-comment">
                     <p><strong>{{ comment.name }}</strong> | <span class=" text-muted">{{ comment.created_on }}</span></p> 
-                    <p class="ml-3">{{ comment.body | linebreaks }}</p>
+                    <p class="ml-5">{{ comment.body | linebreaks }}</p>
                     
                     {% if request.user.is_superuser %}
                         <small class="ml-3">
-                            <a class="btn-info" href="">Edit</a> 
-                            <a class="btn-danger" href="">Delete</a>
+                            <a class="btn-danger btn-sm btn hvr-grow" href="{% url 'delete_comment' comment.id %}">Delete Comment</a>
                         </small>
                     {% endif %}
                     <hr>
@@ -88,23 +87,23 @@
                 {% endfor %}
             </div>
             <div class="col-8 offset-2">
-            <hr>
-            {% if request.user.is_authenticated %}
-            <h5 class="logo-font text-center">Share your thoughts!</h5>   
-            <form action="" method='POST' id="comment-form" >
-                {% csrf_token %}
-                {{ comment_form | crispy }}
-                <button type="submit" class="btn btn-black btn-add hvr-grow" id="submit-review">Post Comment</button>
-            </form>
-                     
-            {% else %}
-                You can leave a comment once you
-                <a href="{% url 'account_login' %}" class="text-blue hvr-grow">Login</a> 
-                to your profile or you
-                <a href="{% url 'account_signup' %}" class="text-blue hvr-grow">Register</a>
-                for an account.
-             {% endif %}
-        </div>
+                <hr>
+                {% if request.user.is_authenticated %}
+                    <h5 class="logo-font text-center">Share your thoughts!</h5>   
+                    <form action="" method='POST' id="comment-form" >
+                        {% csrf_token %}
+                        {{ comment_form | crispy }}
+                        <button type="submit" class="btn btn-black btn-add hvr-grow" id="submit-review">Post Comment</button>
+                    </form>
+                            
+                {% else %}
+                    You can leave a comment once you
+                    <a href="{% url 'account_login' %}" class="text-blue hvr-grow">Login</a> 
+                    to your profile or you
+                    <a href="{% url 'account_signup' %}" class="text-blue hvr-grow">Register</a>
+                    for an account.
+                {% endif %}
+            </div>
         </div>
   
         </div>
@@ -124,4 +123,5 @@
 			window.scrollTo(0,0)
 		})
 	</script>
+
 {% endblock %}
