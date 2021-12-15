@@ -19,7 +19,7 @@
         <h4 class="text-center text-blue">Add Category</h4>
         <div class="row">
             <div class="col text-center mt-2">
-            <button class="btn btn-blue border rounded hvr-grow">
+            <button class="btn btn-blue border mb-5 rounded hvr-grow">
                 <a href="{% url 'add_postcategory' %}" class="text-blue post-button"><i class="fas fa-plus"></i>
                     Add a new Category</a>
             </button>
@@ -28,22 +28,21 @@
     </div>
 
 <div class="container">
-    <hr class="break-md">
+    <hr>
     <h4 class="text-center title-font">Current Categories</h4>
-    <hr class="break-md">
     <div class="blog-card">
         {% for postcategory in postcategories %}
         <div class="card mb-1">
             <div class="card-body container">
                 <div class="row">
                     <div class="col-12 col-md-6">
-                        <h6 class="">{{ postcategory.name }} | {{ postcategory.friendly_name }}</h6>
+                        <h5 class="text-blue">{{ postcategory.friendly_name }} | { {{ postcategory.name }} }</h5>
                     </div>
-                    <div class="col-12 col-md-6">
+                    <div class="col-12 col-md-6 text-center">
                         {% if request.user.is_superuser %}
                             <small class="ml-3">
-                                <a class="btn " href="">Edit</a> 
-                                <a class="site-btn" href="">Delete</a>
+                                <a class="btn btn-info hvr-grow mr-2" href="{% url 'edit_postcategory' postcategory.id %}">Edit</a> 
+                                <a class="btn btn-danger hvr-grow " href="{% url 'delete_postcategory' postcategory.id %}">Delete</a>
                             </small>
                         {% endif %}
                     </div>
@@ -53,4 +52,21 @@
         {% endfor %}
     </div>
 </div>
+</div>
+<div class="btt-button shadow-sm rounded border hvr-grow">
+    <a class="btt-link d-flex h-100">
+        <i class="fas fa-arrow-up text-blue mx-auto my-auto"></i>
+    </a>	
+</div>
+</div>
+
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+<script type="text/javascript">
+$('.btt-link').click(function(e) {
+    window.scrollTo(0,0)
+})
+</script>
 {% endblock %}
