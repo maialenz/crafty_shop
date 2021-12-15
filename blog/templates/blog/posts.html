@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container-fluid justify-content-center">
+        <div class="row">
+            <div class="col text-center">
+                <hr>
+                <h2 class="logo-font mb-4">Hello to my Workshop!</h2>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-9 offset-md-2 text-center ">
+                    <h6 class="blog-title"> Welcome to my blog, where I will post tutorial and crafting techniques of some of the items I handcraft so you can try 
+                        make them yourself. I am looking forward to see what you create! 
+                    </h6>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col">
+                {% if request.user.is_superuser %}
+                <button class="btn btn-blue border rounded hvr-grow">
+                    <a href="" class="text-blue post-button"><i class="fas fa-plus"></i>
+                        Add New Post</a>
+                </button>
+               
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    
+    
+    <!--BlogPost-->
+    <div class="container">
+        <hr>
+        <div class="row mt-1 mb-2"></div>
+        <div class="row p-1">
+            <div class="col-12 col-md-3 blog-category-card">
+                <div>
+                    <h3 class="title-font text-center pt-2">Categories</h3>
+                    <p class="text-center">Select your category</p>
+                    <hr class="break-md">
+                    <!--category for loops-->
+                    {% for postcategory in postcategories %}
+                        <a class="mb-2 text-center btn btn-blue border rounded hvr-grow d-flex justify-content-center text-capitalize" href="{% url 'posts' %}?postcategory={{ postcategory.name }}">{{ postcategory.name }}</a>
+                    {% endfor %}
+                        <a class="mb-2 text-center btn btn-blue border rounded hvr-grow d-flex justify-content-center" href="{% url 'posts' %}">All Posts</a>
+                    <hr class="break-md">
+                </div>
+            </div>
+            <div class="col-12 col-md-9 ml-0 blog-card">
+                {% for post in posts %}
+                <div class="card mb-4">
+                    <div class="card-body container">
+                        <div class="row">
+                            <div class="col-12">
+                                <img class="img-fluid" src="{{ post.image.url }}" alt="{{ post.title }}">
+                            </div>
+                            <div class="col-12">
+                                <h2 class="title-font">{{ post.title }}</h2>
+                                <p class="post-author text-muted h6">{{ post.author }} | {{ post.created_on}} </p>
+                                <p class="post-text">{{post.content|slice:":100" }}...</p>
+                                <div>
+                                    {% if request.user.is_superuser %}
+                                            <a class="site-btn" href="}">Edit</a>  
+                                            <a class="site-btn" href="">Delete</a>
+                                        {% endif %}
+                                    <a class="site-btn btn shadow-none" href="{% url 'post_detail' post.id %}">Read More</a>
+                                </div>   
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
