@@ -31,11 +31,11 @@
         <div class="row text-center">
             <div class="col">
                 {% if request.user.is_superuser %}
-                <button class="btn btn-blue border rounded hvr-grow mr-2">
+                <button class="btn btn-blue btn-sm border rounded hvr-grow mr-2">
                     <a href="{% url 'add_post' %}" class="text-blue post-button"><i class="fas fa-plus"></i>
                         Add New Post</a>
                 </button>
-                <button class="btn btn-blue border rounded hvr-grow">
+                <button class="btn btn-blue btn-sm border rounded hvr-grow">
                     <a href="{% url 'postcategories' %}" class="text-blue post-button"><i class="fas fa-plus"></i>
                         Manage Blog Categories</a>
                 </button>
@@ -57,9 +57,9 @@
                     <hr class="break-md">
                     <!--category for loops-->
                     {% for postcategory in postcategories %}
-                        <a class="mb-2 text-center btn btn-blue border rounded hvr-grow d-flex justify-content-center text-capitalize" href="{% url 'posts' %}?postcategory={{ postcategory.name }}">{{ postcategory.friendly_name }}</a>
+                        <a class="mb-2 text-center btn btn-blue btn-sm border rounded hvr-grow d-flex justify-content-center text-capitalize" href="{% url 'posts' %}?postcategory={{ postcategory.name }}">{{ postcategory.friendly_name }}</a>
                     {% endfor %}
-                        <a class="mb-2 text-center btn btn-blue border rounded hvr-grow d-flex justify-content-center" href="{% url 'posts' %}">All Posts</a>
+                        <a class="mb-2 text-center btn btn-blue border btn-sm rounded hvr-grow d-flex justify-content-center" href="{% url 'posts' %}">All Posts</a>
                     <hr>
                 </div>
             </div>

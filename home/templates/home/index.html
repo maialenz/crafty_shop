@@ -10,22 +10,17 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container h-100">
-        <div class="row h-100 shop-name">
-
-            <div class="w-50 mx-auto my-auto text-center d-md-block">
-                <h1 class="display-4 logo-font text-blue">Welcome to Mai's Crafty Shop</h1>
-                <h3 class="text-black mb-3">
+    <div class="container-fluid">
+        <div class="row shop-name mt-5">
+            <div class="col-10 offset-1 text-center">
+                <h1 class="logo-font text-blue mt-5">Welcome to Mai's Crafty Shop</h1>
+                <h3 class="text-blue mb-3">
                     Highest Quality handmade gifts.
                     <br>
                     From my family to yours.
                 </h3>
-                
-                <div class="my-5">
-                    <h4>
-                        <a href="{% url 'products' %}" class="to-shop-button btn btn-lg border rounded py-3 hvr-grow">Visit the Shop!</a>
-                    </h4>
-                </div>
+                <a href="{% url 'products' %}" class="btn btn-black rounded mt-3 hvr-grow"><h5>Visit the Shop!</h5></a>
+
             </div>            
         </div>
     </div>

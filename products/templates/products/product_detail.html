@@ -117,7 +117,7 @@
         <hr>
         <div class="row">
             <div class="col-12">
-                <h2 class="review-header mb-5">Reviews</h2>
+                <h3 class="review-header mb-4">Reviews</h3>
             </div>
             <div class="col-12 col-lg-5 mb-5">
                 {% if request.user.is_authenticated %}
@@ -145,13 +145,13 @@
                     <button type="submit" class="btn btn-black btn-add hvr-grow" id="submit-review">Post Review</button>
                 </form>
                 {% else %}
-                <h3>
+                <h5>
                     You can leave a review once you
-                    <a href="{% url 'account_login' %}" class="text-blue hvr-grow">Login</a> 
+                    <a href="{% url 'account_login' %}" class="btn-sm rounded btn-blue hvr-grow">Login</a> 
                     to your profile or you
-                    <a href="{% url 'account_signup' %}" class="text-blue hvr-grow">Register</a>
+                    <a href="{% url 'account_signup' %}" class="btn-sm rounded btn-blue hvr-grow">Register</a>
                     for an account.
-                </h3>
+                </h5>
                 {% endif %}
             </div>
             <div class="col-12 col-lg-6 offset-lg-1">

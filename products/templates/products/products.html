@@ -77,10 +77,9 @@
                                             {% endif %}  
                                         </div>
                                         {% if request.user.is_superuser %}
-                                        <div class="col">
-                                            <small class="ml-3  float-right">
+                                        <div class="col" id="product-controls">
+                                            <small class="ml-3 float-right">
                                                 <a class="hvr-grow btn-info btn-sm" href="{% url 'edit_product' product.id %}">Edit</a>
-                                                <strong class="text-black"> | </strong>
                                                 <a class="btn-danger btn-sm text-white hvr-grow" href="{% url 'delete_product' product.id %}"><i class="far fa-trash-alt fa-sm"></i></a>
                                             </small>
                                         </div>
