@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <a href="{% url 'posts' %}" class="btn post-button btn-blue mt-5 ml-5 rounded hvr-grow border-gray bn-bg"><i class="fas fa-angle-double-left"></i></a>
+    <div class="container">
+        <hr>
+        <h2 class="text-center logo-font">Manage Post Categories</h2>
+        <hr>
+        <h4 class="text-center text-blue">Add Category</h4>
+        <div class="row">
+            <div class="col text-center mt-2">
+            <button class="btn btn-blue border rounded hvr-grow">
+                <a href="{% url 'add_postcategory' %}" class="text-blue post-button"><i class="fas fa-plus"></i>
+                    Add a new Category</a>
+            </button>
+        </div>
+        </div>
+    </div>
+
+<div class="container">
+    <hr class="break-md">
+    <h4 class="text-center title-font">Current Categories</h4>
+    <hr class="break-md">
+    <div class="blog-card">
+        {% for postcategory in postcategories %}
+        <div class="card mb-1">
+            <div class="card-body container">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <h6 class="">{{ postcategory.name }} | {{ postcategory.friendly_name }}</h6>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        {% if request.user.is_superuser %}
+                            <small class="ml-3">
+                                <a class="btn " href="">Edit</a> 
+                                <a class="site-btn" href="">Delete</a>
+                            </small>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
