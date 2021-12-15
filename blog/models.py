@@ -27,6 +27,7 @@ class Post(models.Model):
     postcategory = models.ForeignKey('Postcategory', null=True, blank=True,
                                      on_delete=models.SET_NULL)
     title = models.CharField(max_length=200, unique=True)
+    subtitle = models.CharField(max_length=150, default='SubTitle')
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE,
                                related_name='blog_posts')
