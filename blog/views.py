@@ -1,6 +1,7 @@
 ''' Views to render Blog models '''
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
 from .models import Post, Postcategory, Comment
 from .forms import PostForm, PostcategoryForm, CommentForm
@@ -51,6 +52,8 @@ def post_detail(request, post_id):
                                            'new_comment': new_comment,
                                            'comment_form': comment_form})
 
+
+@login_required
 def add_post(request):
     """ Add a post to the blog page """
     if request.method == 'POST':
@@ -73,6 +76,7 @@ def add_post(request):
     return render(request, template, context)
 
 
+@login_required
 def edit_post(request, post_id):
     """ Edit a post in the blog """
     post = get_object_or_404(Post, pk=post_id)
@@ -98,6 +102,7 @@ def edit_post(request, post_id):
     return render(request, template, context)
 
 
+@login_required
 def delete_post(request, post_id):
     """ Delete a post from the blog """
     post = get_object_or_404(Post, pk=post_id)
@@ -118,6 +123,7 @@ def all_postcategories(request):
     return render(request, template, context)
 
 
+@login_required
 def add_postcategory(request):
     """ Add a post category to the blog options """
     if request.method == 'POST':
@@ -140,6 +146,7 @@ def add_postcategory(request):
     return render(request, template, context)
 
 
+@login_required
 def edit_postcategory(request, postcategory_id):
     """ Edit a post category in the blog options """
     postcategory = get_object_or_404(Postcategory, pk=postcategory_id)
@@ -165,6 +172,7 @@ def edit_postcategory(request, postcategory_id):
     return render(request, template, context)
 
 
+@login_required
 def delete_postcategory(request, postcategory_id):
     """ Delete a post category from the blog options """
     postcategory = get_object_or_404(Postcategory, pk=postcategory_id)
@@ -173,33 +181,7 @@ def delete_postcategory(request, postcategory_id):
     return redirect(reverse('postcategories'))
 
 
-def edit_comment(request, comment_id):
-    """ Edit a post comment in the blog options """
-    comment = get_object_or_404(Comment, pk=comment_id)
-    post = comment.post
-    if request.method == 'POST':
-        form = CommentForm(request.POST, instance=comment)
-        if form.is_valid():
-            form.save()
-            messages.success(request, 'Successfully updated post comment!')
-            return redirect(reverse('post_detail', args=[post.id]))
-        else:
-            messages.error(request, 'Failed to update post comment. Please\
-                 ensure the form is valid.')
-    else:
-        form = CommentForm(instance=comment)
-        messages.info(request, 'You are editing a comment!')
-
-    template = 'posts/edit_comment.html'
-    context = {
-        'form': form,
-        'comment': comment,
-        'post': post,
-    }
-
-    return render(request, template, context)
-
-
+@login_required
 def delete_comment(request, comment_id):
     """ Delete a post comment from the blog """
     comment = get_object_or_404(Comment, pk=comment_id)
