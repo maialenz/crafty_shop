@@ -1,16 +1,13 @@
-'''Admin registration for Order models '''
 from django.contrib import admin
 from .models import Order, OrderLineItem
 
 
 class OrderLineItemAdminInline(admin.TabularInline):
-    '''Register OrderLineItem '''
     model = OrderLineItem
     readonly_fields = ('lineitem_total',)
 
 
 class OrderAdmin(admin.ModelAdmin):
-    '''Register Order'''
     inlines = (OrderLineItemAdminInline,)
 
     readonly_fields = ('order_number', 'date',

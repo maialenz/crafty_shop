@@ -1,13 +1,12 @@
-''' Db collections for blog app '''
 from django.db import models
 from django.contrib.auth.models import User
 from .widgets import CustomClearableFileInput
 
 
+
 class Postcategory(models.Model):
-    ''' Add Post Categories '''
+
     class Meta:
-        ''' plural name '''
         verbose_name_plural = 'Postcategories'
 
     name = models.SlugField(max_length=254)
@@ -27,7 +26,6 @@ STATUS = (
 
 
 class Post(models.Model):
-    ''' Blog Post Model '''
     postcategory = models.ForeignKey('Postcategory', null=True, blank=True,
                                      on_delete=models.SET_NULL)
     title = models.CharField(max_length=200, unique=True)
@@ -43,7 +41,6 @@ class Post(models.Model):
     image = models.ImageField(null=True, blank=True)
 
     class Meta:
-        ''' Organise newest to oldest '''
         ordering = ['-created_on']
 
     def __str__(self):
@@ -51,7 +48,6 @@ class Post(models.Model):
 
 
 class Comment(models.Model):
-    ''' Comments model '''
     post = models.ForeignKey(Post, on_delete=models.CASCADE,
                              related_name='comments')
     name = models.CharField(max_length=80)
@@ -61,7 +57,6 @@ class Comment(models.Model):
     active = models.BooleanField(default=True)
 
     class Meta:
-        ''' Organise newest to oldest '''
         ordering = ['-created_on']
 
     def __str__(self):

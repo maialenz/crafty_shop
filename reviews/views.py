@@ -1,12 +1,11 @@
-''' Views to render Review model to template '''
 from django.shortcuts import (render, redirect, reverse,
                               get_object_or_404)
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
-from products.models import Product
 from .models import ProductReview
+from products.models import Product
 
 
 @login_required
@@ -23,7 +22,7 @@ def add_review(request, product_id):
         messages.success(request, 'Thanks! Your review was added!')
 
         return redirect(reverse('product_detail', args=[product.id]))
-
+        
     else:
         messages.error(request, 'Sorry an error has occurred. Please \
             try again.')

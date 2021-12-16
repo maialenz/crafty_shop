@@ -1,27 +1,26 @@
 '''
 Checkout views and user profile logic
 '''
-import json
 from django.shortcuts import (render, redirect, reverse,
                               get_object_or_404, HttpResponse)
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
 
-import stripe
+from .forms import OrderForm
+from .models import Order, OrderLineItem
 
 from products.models import Product
 from profiles.models import UserProfile
 from profiles.forms import UserProfileForm
 from bag.contexts import bag_contents
 
-from .forms import OrderForm
-from .models import Order, OrderLineItem
+import stripe
+import json
 
 
 @require_POST
 def cache_checkout_data(request):
-    ''' save checkout cache '''
     try:
         pid = request.POST.get('client_secret').split('_secret')[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY
@@ -38,7 +37,6 @@ def cache_checkout_data(request):
 
 
 def checkout(request):
-    ''' stripe keys for checkout '''
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
@@ -75,8 +73,7 @@ def checkout(request):
                         )
                         order_line_item.save()
                     else:
-                        for size, quantity in item_data['items_by_size']\
-                                .items():
+                        for size, quantity in item_data['items_by_size'].items():
                             order_line_item = OrderLineItem(
                                 order=order,
                                 product=product,
@@ -95,17 +92,14 @@ def checkout(request):
 
             # Save the info to the user's profile if all is well
             request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse(
-                'checkout_success',
-                args=[order.order_number]))
+            return redirect(reverse('checkout_success', args=[order.order_number]))
         else:
             messages.error(request, 'There was an error with your form. \
                 Please double check your information.')
     else:
         bag = request.session.get('bag', {})
         if not bag:
-            messages.error(request,
-                           "There's nothing in your bag at the moment")
+            messages.error(request, "There's nothing in your bag at the moment")
             return redirect(reverse('products'))
 
         current_bag = bag_contents(request)
