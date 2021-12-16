@@ -98,3 +98,136 @@ Create a new SECRET KEY and make sure not to include any of the passwords on ver
     ![Screenshot connect heroku to github for automatic deployment](docs/Readme/deployment/heroku-connect-github.png)
 
 
+## AWS
+
+As an alternative way to store the static files, I chose to use Amazon's S3 services as a host to the static and media files. To set a S3Bucket, you must have finished your deployment process.
+
+1. Create an AWS account, and choose Personal Account. Add user credentials and inset credit card details. This is a must, but the card will not be charged, unless you go above the free plans.
+
+2. Within the AWS Management Console, under the service tab, look for storage and select S3:
+    
+    ![Screenshot AWS S3 search](docs/Readme/deployment/aws-s3-services.png)
+
+3. Click on Create Bucket. You will need to create a unique name for the bucket (best to choose something that is similar to your project) and AWS region. Choose the closest one to you.
+You will need to Disable (un-tick) the checkbox to 'Block all public access', so your bucket can be public and be accessed:
+
+![Screenshot create bucket button](docs/Readme/deployment/aws-create-bucket.png)
+    
+![Screenshot create bucket steps](docs/Readme/deployment/aws-access-allow-bucket.png)
+
+4. Once the bucket is created, click on it and inside go to the properties tab. All the way at the bottom, select edit on 'Static Website Hosting' and enable it:
+
+![screenshot Aws static website hosting](docs/Readme/deployment/aws-static-hsoting.png)
+
+5. Once accepted, go to the permissions tab and scroll down to the CORS section, select edit and add the code facilitated by CI
+
+    ```
+    [
+        {
+            "AllowedHeaders": [
+                "Authorization"
+            ],
+            "AllowedMethods": [
+                "GET"
+            ],
+            "AllowedOrigins": [
+                "*"
+            ],
+            "ExposeHeaders": []
+        }
+    ]
+    ```
+6. Still within the permission tab, go to the bucket policy section and select edit. Click on the Policy Generator button and configure it: 
+
+![screenshot Aws policy ](docs/Readme/deployment/aws-policy-generator.png)
+
+![screenshot Aws ARN code](docs/Readme/deployment/aws-arn-number.png)
+
+7. When you paste the policy generated, paste it on the box, and dont save until you have included `/*` behing the Resource key. This will show you the arn:::... number, but you manually have to add the /* at the end
+
+![screenshot Aws policy](docs/Readme/deployment/aws-policy-edit.png)
+
+7. On the permissions tab, scroll down until you see Access Control List section and choose to edit. Add Everytone to the list:
+
+![screenshot Aws acess control](docs/Readme/deployment/aws-access-control.png)
+
+8. This done, go to the IAM tab,, and select groups:
+
+![screenshot Aws acess control](docs/Readme/deployment/aws-iam-groups.png)
+
+Once here, click on the right top blue button saying `Create Group` and name your group. It's a good idea to call it manage-{project-name}. Once named, accept and click yes all the way.
+
+9. In the sidebar, select the Policies link and create policy. Choose the JSON tab. Import managed policy link and search for S3 and import the policy called `AmazonS3FullAccess`
+
+This policy will need changing due to our partiqular requirements. Copy the ARN snipet and add it to the Resourse value. Example:
+
+![screenshot Aws group policy](docs/Readme/deployment/aws-group-policy.png)
+
+Once you have done this, select review policy, give it a name and description, and push create policy. You have to attach that policty to the created group by choosing `User Groups` tab in the sidebar. 
+Choose the app group, select attach policy. search for the newly created policy and attach
+
+10. Once all this is done, you have to create a user to add to the group. Select the users link in the sidebar, then click on the `Add User` button. The best practice to call a name is 'APP-NAME-staticfiles-user' then check the Programmatic access box and choose next. 
+Make sure you choose the correct group that will be displayed and click through to create a new user. You will see a success mesage with an option to download `.csv`, which contains the credentials needed. DOWNLOAD THIS DOCUMENT AS YOU CANNOT ACCESS IT AGAIN! And make sure it's safely stored, as it contains very sensitive information.
+
+
+11. To connect the app to the new S3 bucket you have to install two packages:
+- `pip3 install boto3`
+- `pip3 install django-storages`
+
+12. Go to Heroku and add the new variables we will need . You can find the credentials for these in the downloaded .csv document. The variables to add are
+    ```
+    AWS_ACCES_KEY_ID =
+    AWS_SECRET_ACCESS_KEY =
+    USE_AWS = True
+    ```
+
+13. Back in our workspace, Add this logic to settings.py to guide the app to use the created AWS
+
+    ```
+    if 'USE_AWS' in os.environ:
+        # Bucket config
+        AWS_STORAGE_BUCKET_NAME = 'cbd-shield'
+        AWS_S3_REGION_NAME = 'eu-west-2'
+        AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESSS_KEY_ID')
+        AWS_ACCESS_KEY_ID = os.environ.get('AWS_SECRET_ACCESSS_KEY')
+        AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+
+        # Static and media files
+        STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+        STATICFILES_LOCATION = 'static'
+        DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+        MEDIAFILES_LOCATION = 'media'
+
+        # Override statuc abnd media URLs in products
+        STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+        MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+    ```
+
+14. Once you have added the conditional to use AWS, create a file in the apps rood directory. Call it `cutom_storages.py` and add the follwoing code to Allow dnago to use AWS in production.
+
+    ```
+    from django.conf import settings
+    from storages.backends.s3boto3 import S3Boto3Storage
+
+
+    class StaticStorage(S3Boto3Storage):
+        '''static files'''
+        location = settings.STATICFILES_LOCATION
+
+
+    class MediaStorage(S3Boto3Storage):
+        ''' media files'''
+        location = settings.MEDIAFILES_LOCATION
+
+    ```
+15. If you save, commit and push the changes now, you will see that a new static folder has been created in S3. Here you can add another folder in the same directory called media. You can add all the images you need for your project here, and once you have done so, click next and choose the option `Grant public read acces to this object` and Upload.
+
+16. To finalize the setup of AWS, you will need to create a new Stripe Webhook, which will target the deployed endpoint of the project. Within Stripe, inside the developers tab, go to webhooks and choose to and endpoint. Copy your deployed apps name, but before you create it, do not forget to add `/checkout/wh/` to the Endpoint URL. This is very important as without this it will not work. 
+
+You should add the `payment_intent.succeeded` and `payment_intent.payment_failed` events to the endpoint. Once you have done this, choose to update endpoint.
+
+![screenshot of stripe webhook endpoint](docs/Readme/deployment/stripe-endpoint.png)
+
+17. This done, now you can reveal the signing secret and you should add it to Heroku's config vars. 
+`STRIPE_WH_SECRET`.
+
