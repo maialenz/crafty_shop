@@ -38,7 +38,6 @@ class Product(models.Model):
 
     # Offer size on jewellery for users
     has_sizes = models.BooleanField(default=False, null=True, blank=True)
-   
 
     def __str__(self):
         return self.name

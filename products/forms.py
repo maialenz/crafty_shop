@@ -4,7 +4,11 @@ from .models import Product, Category
 
 
 class ProductForm(forms.ModelForm):
-
+    '''
+    Get all objects and categories
+    get friendly name and apply
+    widget attibute for styling
+    '''
     class Meta:
         model = Product
         fields = '__all__'

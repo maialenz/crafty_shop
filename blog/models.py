@@ -1,11 +1,10 @@
+''' Models for blog '''
 from django.db import models
 from django.contrib.auth.models import User
-from .widgets import CustomClearableFileInput
-
 
 
 class Postcategory(models.Model):
-
+    ''' Category model for Blog Post '''
     class Meta:
         verbose_name_plural = 'Postcategories'
 
@@ -26,6 +25,7 @@ STATUS = (
 
 
 class Post(models.Model):
+    ''' Post model for Blog app '''
     postcategory = models.ForeignKey('Postcategory', null=True, blank=True,
                                      on_delete=models.SET_NULL)
     title = models.CharField(max_length=200, unique=True)
@@ -41,6 +41,7 @@ class Post(models.Model):
     image = models.ImageField(null=True, blank=True)
 
     class Meta:
+        ''' order posts by reverse date '''
         ordering = ['-created_on']
 
     def __str__(self):
@@ -48,6 +49,7 @@ class Post(models.Model):
 
 
 class Comment(models.Model):
+    ''' Comment model for Blop app '''
     post = models.ForeignKey(Post, on_delete=models.CASCADE,
                              related_name='comments')
     name = models.CharField(max_length=80)
@@ -57,6 +59,7 @@ class Comment(models.Model):
     active = models.BooleanField(default=True)
 
     class Meta:
+        ''' order comments by reverse date '''
         ordering = ['-created_on']
 
     def __str__(self):

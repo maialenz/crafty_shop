@@ -1,10 +1,11 @@
+''' Form file for blog '''
 from django import forms
 from .widgets import CustomClearableFileInput
 from .models import Post, Postcategory, Comment
 
 
 class PostForm(forms.ModelForm):
-
+    '''form to add a new post'''
     class Meta:
         model = Post
         fields = '__all__'
@@ -24,13 +25,14 @@ class PostForm(forms.ModelForm):
 
 
 class PostcategoryForm(forms.ModelForm):
-
+    ''' form for category'''
     class Meta:
         model = Postcategory
         fields = ('name', 'friendly_name')
 
 
 class CommentForm(forms.ModelForm):
+    ''' form to add comment '''
     class Meta:
         model = Comment
         fields = ('name', 'body')
