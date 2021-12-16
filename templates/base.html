@@ -100,7 +100,7 @@
 
 					<!-- User Account -->
 					<li class="list-inline-item dropdown">
-						<a class="text-blue nav-link" href="#" id="user-options" data-toggle="dropdown"
+						<a class="text-blue nav-link" href="#" id="user-option" data-toggle="dropdown"
 							aria-haspopup="true" aria-expanded="false">
 							<div class="text-center">
 								<div class="hvr-grow"><i class="fas fa-user"></i></div>
@@ -108,7 +108,7 @@
 							</div>
 						</a>
 						<!-- User Account Menu -->
-						<div class="dropdown-menu border" aria-labelledby="user-options">
+						<div class="dropdown-menu border" aria-labelledby="user-option">
 							{% if request.user.is_authenticated %}
 							{% if request.user.is_superuser %}
 							<!-- user authenticated AND SUPERUSER -->
