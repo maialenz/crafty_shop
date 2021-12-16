@@ -29,6 +29,7 @@ def all_posts(request):
 
 
 def post_detail(request, post_id):
+    ''' A view to render details on another template'''
     template_name = 'blog/post_detail.html'
     post = get_object_or_404(Post, pk=post_id)
     comments = post.comments.filter(active=True)

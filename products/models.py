@@ -7,6 +7,7 @@ class Category(models.Model):
     ''' Models for category instance '''
 
     class Meta:
+        '''plural of category '''
         verbose_name_plural = 'Categories'
 
     name = models.CharField(max_length=254)
@@ -38,7 +39,6 @@ class Product(models.Model):
 
     # Offer size on jewellery for users
     has_sizes = models.BooleanField(default=False, null=True, blank=True)
-   
 
     def __str__(self):
         return self.name
