@@ -15,19 +15,19 @@
         <div class="row">
             <div class="col-10 offset-1">
                 <hr class="break-md">
-                <h4 class="text-center title-font">Edit a Post</h4>
+                <h4 class="text-center title-font">Edit a Category</h4>
                 <hr class="break-md">
             </div>
         </div>
 
         <div class="row">
             <div class="col-10 offset-1">
-                <form method="POST" action="{% url 'edit_post' post.id %}" class="form mb-2" enctype="multipart/form-data">
+                <form method="POST" action="{% url 'edit_postcategory' postcategory.id %}" class="form mb-2">
                     {% csrf_token %}
                     {{ form | crispy }}
                     <div class="text-right">
-                        <a class="btn site-btn" href="{% url 'posts' %}">Cancel</a>
-                        <button class="btn site-btn" type="submit">Update Post</button>
+                        <a class="btn btn-blue rounded hvr-grow" href="{% url 'postcategories' %}">Cancel</a>
+                        <button class="btn btn-black rounded hvr-grow" type="submit">Update Post Category</button>
                     </div>
                 </form>
             </div>            

@@ -164,7 +164,7 @@ def edit_postcategory(request, postcategory_id):
         form = PostcategoryForm(instance=postcategory)
         messages.info(request, f'You are editing {postcategory.name}')
 
-    template = 'posts/edit_postcategory.html'
+    template = 'blog/edit_postcategory.html'
     context = {
         'form': form,
         'postcategory': postcategory,
