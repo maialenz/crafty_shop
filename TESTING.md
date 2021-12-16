@@ -15,15 +15,15 @@ Once finished, I tested my site on a two different phones, laptop, tablet and de
 
 ## Testing Table of Contents
 
-### 1. [Validator](#validation)
+### 1. [VALIDATOR](#validation)
 
-### 2. [User Story Testing](#user-story-testing)
+### 2. [USER STORY TESTING](#user-story-testing)
 
-### 3. [Browser Compatibility and Device Responsiveness Testing](#browser-compatibility-and-device-responsiveness-testing)
+### 3. [BROWSER COMPATIBILITY AND DEVICE RESPONSIVENESS TESTING](#browser-compatibility-and-device-responsiveness-testing)
 
-### 4. [Google Lighthouse Testing](#google-lighthouse-testing)
+### 4. [GOOGLE LIGHTHOUSE TESTING](#google-lighthouse-testing)
 
-### 5. [Bugs](#bugs)
+### 5. [BUGS](#bugs)
 
 
 ## VALIDATOR:
@@ -247,4 +247,79 @@ AND
     ![UserStory 21](docs/Readme/testing/stories/user-story-21-delete.png)
 
 
+---
 
+## BROWSER COMPATIBILITY AND DEVICE RESPONSIVENESS TESTING
+
+While developing this project, I kept thoroughly testing the localserver on different viewports. The majority of the coding was done on a 32" monitor, so I found a few challenges to fit both very big and small screens. The deployed version was tested on a samsung galaxy s21ultra, as well as on a samsung 5e tablet and a one plus pro 9 phone. 
+
+Testing the project on so many different viewports has helped me continoutly adapting the look of it:
+
+### Devices
+
+**One Plus Ultra**
+
+![Image of OnePlus](docs/Readme/testing/responsive/one-plus-pro-9.jpeg)
+
+**Samsung Galaxy S21 Ultra**
+
+![Image of Samsung Phone](docs/Readme/testing/responsive/samsung-galaxy-s21-ultra.jpeg)
+
+**Samsung Table 5e**
+
+![Image of tablet](docs/Readme/testing/responsive/samsung-tablet-5e.jpeg)
+
+### Browers
+
+I tested the project thoroughly on the main browsers I have access to. Unfortunatelly I ws not able to test the project on a ios and os systems this time.
+Below it can be seen that there were almost no differences between browsers.
+
+**Microsoft Edge**
+
+![Responsive on Microsoft Edge](docs/Readme/testing/responsive/microsoft-edge.png)
+
+**Chrome**
+
+![Responsive on Chrome](docs/Readme/testing/responsive/chrome-13.png)
+
+**Opera**
+
+![Responsive in Opera](docs/Readme/testing/responsive/opera.png)
+
+--- 
+
+## GOOGLE LIGHTHOUSE TESTING
+
+- Once the project was deployed and almost ready, I tested the project both for mobile and desktop using Google Developer tools Lighthouse application.
+
+I found that due to the use of very simple colors I was able to keep the performance very high, both of phone but especially in desktop view:
+
+### Desktop
+
+![Lighthouse test](docs/Readme/testing/lighthouse/home-lighthouse.png)
+![Lighthouse test](docs/Readme/testing/lighthouse/products-lighthouse.png)
+
+### Mobile 
+
+![Lighthouse test](docs/Readme/testing/lighthouse/all-posts-mobile-lighthouse.png)
+![Lighthouse test](docs/Readme/testing/lighthouse/all-products-mobile-lighthouse.png)
+![Lighthouse test](docs/Readme/testing/lighthouse/home-mobile-lighthouse.png)
+
+---
+
+## BUGS
+
+Here are the major issues I faced while builidng this project:
+
+1. The requirements.txt filled up automatically one day and I had lots of uneccesary packages intalled. After that, everytime I opened the workspace I had to reinstall everything.
+    - Tutor support found this to be a consecuence of a gitpod upgrade, but Igor tidied my requirements.txt, so I could install just the necessary packages. 
+
+2. Button not aligning center: especially at the bottom of the forms, it always aligned in the right. To fix this I added an extra row and col under the form and I added text-center to the row. This fixed the issue, so I apply the same logic to all the buttons that were not on the right place.
+
+3. One of the biggest issues I had was with the image field. When I submitted the form without any image, it broke all the code. I did not know how to fix this as I couldn't see where the problem was. After a long time searching on stackoverflow and slack and not finding a solution, I noticed I forgot to add the no image logic inside the template. As soon as I added this it fixed the issue. 
+
+4. Towards the end of the testing, I noticed that when I tried to edit a category of a blog post, the server gave a status 500.  As I checked on the terminal using my workspace to test it again, I noticed that while the refractoring on the code I must have removed some extra templates that I was not supposed to touch. Creating another template and adding the logic back fixed this issue.
+
+### Known Bug:
+
+1. During the testing, I noticed that in the blog detail page, at the bottom of the comment form, there is no margin at the bottom, making it a little awkward to see for non logged users. Although I try to fix this using Dev tools, moving something meant the rest where moving in other directions too. Due to the last of time left before the project submission, I decided to leave this bug the way it is, since althought awkward, it doesn't look very bag on mobile screens, and it is no the main part of the whole application.
