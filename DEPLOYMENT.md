@@ -98,6 +98,9 @@ Create a new SECRET KEY and make sure not to include any of the passwords on ver
     ![Screenshot connect heroku to github for automatic deployment](docs/Readme/deployment/heroku-connect-github.png)
 
 
+---
+
+
 ## AWS
 
 As an alternative way to store the static files, I chose to use Amazon's S3 services as a host to the static and media files. To set a S3Bucket, you must have finished your deployment process.
@@ -180,6 +183,7 @@ Make sure you choose the correct group that will be displayed and click through 
     AWS_SECRET_ACCESS_KEY =
     USE_AWS = True
     ```
+Remember to remove `DISABLE_COLLECTSTATIC` variable as you do not need it anymore
 
 13. Back in our workspace, Add this logic to settings.py to guide the app to use the created AWS
 
@@ -231,3 +235,74 @@ You should add the `payment_intent.succeeded` and `payment_intent.payment_failed
 17. This done, now you can reveal the signing secret and you should add it to Heroku's config vars. 
 `STRIPE_WH_SECRET`.
 
+
+---
+
+
+## GitHub
+
+#### Forking the GitHub Repository
+
+It is posible to copy and edit this project by any user without changing the repository on the original GitHub account. This can be done by forking the repository by following the following steps (Forking will only make a copy of the original project, so any changes won't affect the original):
+
+1. Log in to [GitHub](https://github.com/join/get-started) and locate the [GitHub repository](https://github.com/maialenz/crafty_shop)
+
+   - You can also find it by seaching maialenz/crafty_shop on the [GitHub](https://github.com/) seach-bar.
+
+2. Below the repository title at the top, above the "Settings" button on the horizontal menu and under the user's profile logo, locate the "Fork" button and click on it.
+
+![screenshot of the fork button](docs/Readme/deployment/github-fork-repository.png)
+
+3. You will have made a copy of the whole repository in your own GitHub account.
+
+4. To share the changes/edits you have made to improve the original project with the owner, you can submit a pull request. Find the details to do so following this [link](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork).
+
+#### Making a local clone
+
+1. Log in to [GitHub](https://github.com/join/get-started) and locate the [GitHub repository](https://github.com/maialenz/crafty_shop)
+
+  - You can also find it by seaching maialenz/crafty_shop on the [GitHub](https://github.com/) seach-bar.
+
+2. Above the repository files and to the left of the green "GitPod" button, locate the "Code" or "download" button and click on it. To clone the repository using HTTPS copy the link on display (you can click on the clipboard to copy it faster).
+
+ ![Screenshot of code dropdown](docs/Readme/deployment/github-copy-code.png)
+
+3. If you are working on a desktop application, follow the documentation found on number 5. For cloud based, open your own terminal in GitPod or your preferred IDE (we will be using Gitpod).
+
+  - For this project, we created a new workspace environment in GITPOD by using Code Institute's [Full Gitpod template](https://github.com/Code-Institute-Org/gitpod-full-template). To open it, just click on the Use this template button and all the necessary tools will be added to the work environment without the need of manually installing them. It takes a few minutes to load.
+
+  ![Screensot of the template button in GitHub](docs/Readme/deployment/gitpod-template-CI.png)
+
+5. If you use GitHub desktop follow the steps documented [here](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop).
+
+---
+
+#### Gitpod workspace after copying the HTTPS clone link
+
+1. Change the current working directory to the location where you want the cloned directory to be made.
+
+2. In the terminal type `git clone` and then paste the URL copied on step 3
+
+```
+$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+```
+
+3. Press Enter. This will create your local clone.
+
+```
+$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+> Cloning into `CI-Clone`...
+> remote: Counting objects: 10, done.
+> remote: Compressing objects: 100% (8/8), done.
+> remove: Total 10 (delta 1), reused 10 (delta 1)
+> Unpacking objects: 100% (10/10), done.
+```
+
+4. To open a preview port within your own local workspace type within gitpod, enter the following command on the terminal:
+
+```
+$ python3 app.py
+```
+
+5. Once your Gitpod workspace is created, only open the workspace from Gitpod Workspaces itself (https://gitpod.io/workspaces/), and not from GitHub Gitpod button (Only use this button once at the very begining when creating a new workspace)
+![screenshot of opening gitwork workspace](docs/Readme/deployment/gitpod-workspace-open.png)
