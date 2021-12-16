@@ -312,7 +312,7 @@ input[name='q']::placeholder {
 /* -------------------------------- Media Queries */
 
 
-@media (max-width: 300px) {
+@media (max-width: 450px) {
     body { 
         overflow-x: hidden;
     }
@@ -436,6 +436,9 @@ images same size */
         padding-top: 164px;
     }
 
+    .shop-name  {
+        padding-top: 160px;
+    }
 }
 
 /* pad the top a bit when navbar is collapsed on mobile */
