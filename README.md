@@ -160,20 +160,17 @@ This will all be achieved through creating a clear, tidy and strong UI focusing 
 
 ### Structure
 
-- The structure of the site will be layed out in ----------- pages. The landing page(homepage) will welcome new and returning users to the page, where they'll see a call to action button that will direct them to the shop where they'll be able to select and purchase different items. Anonymous users wi8ll be allowed to make purchases and will be able to not to make an account, but these will not be able to access the personal accounts where they can see their latest purchases. Normal users are not able to access the full CRUD functionality of the database, being this only accessible for the Admin/Superusers. The latest, will have an extra page where they will be able to insert/edit/delete products. Logged in users will have the logout option to stop their session cookies. The basic structure of the website is:
+- The structure of the site will be layed out in around 15 pages. The landing page(homepage) will welcome new and returning users to the page, where they'll see a call to action button that will direct them to the shop where they'll be able to select and purchase different items. Anonymous users will be allowed to make purchases and will be able to not to make an account, but these will not be able to access the personal accounts where they can see their latest purchases as well as having the posibility of leaving comments and reviews. Normal users are not able to access the full CRUD functionality of the database, being this only accessible for the Admin/Superusers. The latest, will have an extra page where they will be able to insert/edit/delete products. Logged in users will have the logout option to stop their session cookies. The basic structure of the website is:
     - Header/Navigation - *Top Level*
         - The navigation bar will be a hamburger/bars menu icon on smaller screen sized. It is not sticky as there will be a back to top icon throught the site for UX purposes.
         - The navigation menu will feature a search bar allowing users fast and immediate search of the site to quickly find the products they are looking for. 
         - Categories will be displayed in button/link form to access same category products in a faster way.
     - Body - *Main Page Elements*
         - The product page overview will show a typical webshop layout including cards with product images, product name, price and a button to direct the user to the detailed page of the selected product for further inspection.
-        - The individual product page will include the product's image, a description, price and add to bag button.
+        - The individual product page will include the product's image, a description, price and add to bag button. It will also have a section at the bottom for users to leave a review under their favorite products.
         - The bag page will show the summary of the product selection with the extra prices added with the grand total showing at the bottom of all products added to the bag for the consideration of the customers before the purchase.
         - The order confirmation page will display all the users details to confirm the order was successfully delivered.
-    - Footer - *Bottom level*
-        - Copyright information
-        - Contact information
-
+        - The blog page will be display as extra info and engagement technique. Users will be able to join the conversation and leave messages.
 ---
 
 ### Wireframes
@@ -182,6 +179,8 @@ The wireframes were created using [Balsamiq](https://balsamiq.com/) to design an
 - [Mobile Wireframes ](docs/Readme/wireframes/mobile-wireframes.png)
 - [Ipad Wireframes ](docs/Readme/wireframes/ipad-wireframes.png)
 - [Desktop Wireframes ](docs/Readme/wireframes/desktop-wireframes.png)
+
+*Note: As this project was made following Boutique Ado, I was very unsure of what my learning outcomes and expectations were. The wireframes above, show the product I was aiming to create at the start. Once I got deeper in the project and I understood the assigment, I decided to add extra challenges into it. Unfortunatelly, I have lost the wireframes I created to add the review and blog models, leaving the wireframes as representation of the learning curve I went throught.*
 
 ---
 
@@ -217,7 +216,7 @@ The Crafty Shop website will have an overall simplistic and minimalist feeling, 
 
 ### Logo
 
-- The favicon has been created using [Canva]() for a personalized and custom brand. It displays some geometrical figures hinting to clay. with very suttle/earthy colors, keeping the handcrafted mindset of the website.
+- The favicon has been created using [Canva](https://www.canva.com/es_es/) for a personalized and custom brand. It displays some geometrical figures hinting at molding clay. with very suttle/earthy colors, keeping the handcrafted mindset of the website.
 
 
 ### Imagery
@@ -575,6 +574,11 @@ Active | active | default=True | BooleanField
 
 - [Reverse on commits](https://dev.to/lofiandcode/git-and-github-how-to-revert-a-single-file-dha) & [here](https://medium.com/swlh/using-git-how-to-go-back-to-a-previous-commit-8579ccc8180f#:~:text=Use%20git%20checkout%20%26%20the%20ID,'t%20forget%20the%20final%20'%20.)
 
+- Slack for general questions
+
+- django documentation
+
+- Stackoverflow for reasurance
 
 ## Code
 
@@ -583,8 +587,6 @@ The base of this project was made following Code Institutes Boutique Ado project
 - vertical align button: [stackoverflow](https://stackoverflow.com/questions/45086/vertical-align-middle-button-in-div)
 
 - Got the idea to make the blog from Jenny in Slack
-
-
 
 ## Media
 - Thank you to all the image creators on Unsplash for allowing me use their images for free in this project:
